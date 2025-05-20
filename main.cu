@@ -16,53 +16,19 @@ bool validate_result(const std::string &result_file, const std::string &referenc
 }
 
 int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        std::cerr << "Usage: " << argv[0] << " <case_number>" << std::endl;
-        return 1;
-    }
 
-    int case_number = std::atoi(argv[1]);
-    if (case_number < 0 || case_number > 9) {
-        std::cerr << "Case number must be between 0 and 9" << std::endl;
-        return 1;
-    }
-
-    // Construct file paths
-    std::string folder = "data/" + std::to_string(case_number) + "/";
-    std::string input0_file = folder + "input0.raw";
-    std::string input1_file = folder + "input1.raw";
-    std::string result_file = folder + "result.raw";
-    std::string reference_file = folder + "output.raw";
 
     // TODO: Read input0.raw (matrix A) and input1.raw (matrix B)
 
-    // Allocate host and device memory
-    float *A, *B, *C_naive, *C_tiled;
-    float *d_A, *d_B, *d_C;
     // TODO: Use cudaMalloc and cudaMemcpy for GPU memory
 
     // Measure naive CUDA performance
-    cudaEvent_t start, stop;
-    cudaEventCreate(&start);
-    cudaEventCreate(&stop);
-    cudaEventRecord(start);
     // TODO: Launch naive_cuda_matmul kernel
-    cudaEventRecord(stop);
-    cudaEventSynchronize(stop);
-    float naive_cuda_time;
-    cudaEventElapsedTime(&naive_cuda_time, start, stop);
-    naive_cuda_time /= 1000.0f; // Convert to seconds
 
     // TODO: Write naive CUDA result to file and validate
-
     // Measure tiled CUDA performance
-    cudaEventRecord(start);
+
     // TODO: Launch tiled_cuda_matmul kernel
-    cudaEventRecord(stop);
-    cudaEventSynchronize(stop);
-    float tiled_cuda_time;
-    cudaEventElapsedTime(&tiled_cuda_time, start, stop);
-    tiled_cuda_time /= 1000.0f; // Convert to seconds
 
     // TODO: Write tiled CUDA result to file and validate
 

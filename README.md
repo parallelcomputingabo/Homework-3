@@ -4,7 +4,7 @@
 
 **Homework Assignment 3: Matrix Multiplication with CUDA**
 
-**Due Date**: **26/05/2025**  
+**Due Date**: **31/05/2025**  
 **Points**: 100
 
 ---
@@ -42,22 +42,14 @@ for each element of the output matrix.
 In the naive CUDA implementation, each thread computes one element of the output matrix \( C \). The GPU organizes
 threads into a grid of thread blocks, where each block contains a group of threads (e.g., 16x16 threads).
 
-**Naive CUDA Matrix Multiplication Pseudocode**
+**Naive CUDA Matrix Multiplication**
 
 Assume matrices \( A \) \( m x n \), \( B \) \( n x p \), and \( C \) \( m x p \) are stored in
 row-major order in GPU global memory:
 
 ```c
 __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p) {
-    int row = blockIdx.y * blockDim.y + threadIdx.y; // Row index
-    int col = blockIdx.x * blockDim.x + threadIdx.x; // Column index
-    if (row < m && col < p) {
-        float sum = 0.0f;
-        for (int k = 0; k < n; k++) {
-            sum += A[row * n + k] * B[k * p + col];
-        }
-        C[row * p + col] = sum;
-    }
+    
 }
 ```
 
@@ -76,42 +68,13 @@ GPUs have **shared memory**, a fast, on-chip memory shared by threads in a block
 matrices into tiles (submatrices) that fit into shared memory, reducing global memory accesses and improving
 performance.
 
-**Tiled CUDA Matrix Multiplication Pseudocode**
+**Tiled CUDA Matrix Multiplication**
 
 Assume a tile size of `TILE_WIDTH` (e.g., 16 or 32):
 
 ```c
 __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p, uint32_t tile_width) {
-    __shared__ float A_tile[TILE_WIDTH][TILE_WIDTH];
-    __shared__ float B_tile[TILE_WIDTH][TILE_WIDTH];
-    
-    int row = blockIdx.y * blockDim.y + threadIdx.y;
-    int col = blockIdx.x * blockDim.x + threadIdx.x;
-    float sum = 0.0f;
-    
-    for (int t = 0; t < (n + tile_width - 1) / tile_width; t++) {
-        // Load tiles into shared memory
-        if (row < m && t * tile_width + threadIdx.x < n)
-            A_tile[threadIdx.y][threadIdx.x] = A[row * n + t * tile_width + threadIdx.x];
-        else
-            A_tile[threadIdx.y][threadIdx.x] = 0.0f;
-            
-        if (t * tile_width + threadIdx.y < n && col < p)
-            B_tile[threadIdx.y][threadIdx.x] = B[(t * tile_width + threadIdx.y) * p + col];
-        else
-            B_tile[threadIdx.y][threadIdx.x] = 0.0f;
-            
-        __syncthreads(); // Wait for all threads to load tiles
-        
-        // Compute partial sum for this tile
-        for (int k = 0; k < tile_width; k++)
-            sum += A_tile[threadIdx.y][k] * B_tile[k][threadIdx.x];
-            
-        __syncthreads(); // Ensure tiles are reused correctly
-    }
-    
-    if (row < m && col < p)
-        C[row * p + col] = sum;
+
 }
 ```
 
