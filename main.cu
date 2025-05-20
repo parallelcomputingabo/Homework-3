@@ -38,15 +38,6 @@ int main(int argc, char *argv[]) {
     std::cout << "Tiled CUDA time: " << tiled_cuda_time << " seconds\n";
 
     // Clean up
-    cudaFree(d_A);
-    cudaFree(d_B);
-    cudaFree(d_C);
-    delete[] A;
-    delete[] B;
-    delete[] C_naive;
-    delete[] C_tiled;
-    cudaEventDestroy(start);
-    cudaEventDestroy(stop);
 
     return 0;
 }
