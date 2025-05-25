@@ -22,3 +22,6 @@ set_target_properties(app PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON
         CUDA_ARCHITECTURES 60 70 75 80 86 # Support common NVIDIA architectures (Pascal, Volta, Turing, Ampere, Ada)
 )
+
+# Comparison tool for generating result tables
+add_executable(compare_results compare_results.cpp)
