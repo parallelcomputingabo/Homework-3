@@ -1,0 +1,3 @@
+D:/Education/Abo Akademi/Parallel Programming/Assignments/Assignment 3/Homework-3-parallel-programming/build/CMakeFiles/app.dir
+D:/Education/Abo Akademi/Parallel Programming/Assignments/Assignment 3/Homework-3-parallel-programming/build/CMakeFiles/ALL_BUILD.dir
+D:/Education/Abo Akademi/Parallel Programming/Assignments/Assignment 3/Homework-3-parallel-programming/build/CMakeFiles/ZERO_CHECK.dir

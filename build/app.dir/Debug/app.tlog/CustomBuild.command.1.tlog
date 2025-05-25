@@ -1,0 +1,10 @@
+^D:\EDUCATION\ABO AKADEMI\PARALLEL PROGRAMMING\ASSIGNMENTS\ASSIGNMENT 3\HOMEWORK-3-PARALLEL-PROGRAMMING\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Education/Abo Akademi/Parallel Programming/Assignments/Assignment 3/Homework-3-parallel-programming" "-BD:/Education/Abo Akademi/Parallel Programming/Assignments/Assignment 3/Homework-3-parallel-programming/build" --check-stamp-file "D:/Education/Abo Akademi/Parallel Programming/Assignments/Assignment 3/Homework-3-parallel-programming/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
