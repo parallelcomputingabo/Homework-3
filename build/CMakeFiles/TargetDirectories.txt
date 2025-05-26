@@ -1,0 +1,3 @@
+D:/Abo/Parallel_Programming/Homework-3/build/CMakeFiles/app.dir
+D:/Abo/Parallel_Programming/Homework-3/build/CMakeFiles/ALL_BUILD.dir
+D:/Abo/Parallel_Programming/Homework-3/build/CMakeFiles/ZERO_CHECK.dir
