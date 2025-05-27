@@ -13,7 +13,7 @@
 
 Welcome to the third homework assignment of the Parallel Programming course!
 In Assignment 2, you optimized matrix multiplication using cache-friendly blocked multiplication and OpenMP for CPU
-parallelism. In this assignment, you will take matrix multiplication to the GPU using **CUDA**, NVIDIA’s parallel
+parallelism. In this assignment, you will take matrix multiplication to the GPU using **CUDA**, NVIDIA's parallel
 computing platform. Your task is to implement matrix multiplication on the GPU, optimize it using CUDA-specific
 techniques, and compare its performance with your CPU-based implementations from Assignment 2.
 
@@ -48,6 +48,18 @@ while reinforcing the importance of data locality and parallelism.
 ---
 
 ### FYI
+
+#### CUDA Optimizations
+
+My CUDA implementation focuses on memory optimization through tiled matrix multiplication using 16×16 shared memory tiles. The key insight was using dynamic shared memory allocation with `extern __shared__ float shared_mem[]` to store both A and B matrix tiles, which dramatically reduced global memory accesses. This approach achieved speedups ranging from 118x to 1660x over the naive CUDA implementation, with the best performance on larger matrices where GPU parallelism can overcome memory transfer overhead.
+
+#### Challenges
+
+**Well, properly installing CUDA toolchain was really painful....**
+
+The main challenges I faced were CUDA environment setup issues: in WSL2 (segmentation faults due to driver mismatches that required SDK reinstallation, I have a RTX3070 graphics card, in nvidia-smi it says to be able to support cuda 12.9, but somehow I installed 12.2 2 years ago, and spent a whole bunch of time trying to properly uninstall-reinstall the cuda sdk tools...);
+then another one was implementing dynamic shared memory correctly.
+
 In previous assignments the way I do the result check is always allowing the floating point deference to be as large as 0.01 (1e-2) to pass the testcases, since I've got results like:
 ```
 Validating results...
