@@ -20,5 +20,5 @@ target_link_libraries(app PRIVATE CUDA::cudart)
 # Enable separable compilation for CUDA (recommended for most CUDA projects)
 set_target_properties(app PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON
-        CUDA_ARCHITECTURES 60 70 75 80 86 # Support common NVIDIA architectures (Pascal, Volta, Turing, Ampere, Ada)
+        CUDA_ARCHITECTURES 80 # Support common NVIDIA architectures (Pascal, Volta, Turing, Ampere, Ada)
 )

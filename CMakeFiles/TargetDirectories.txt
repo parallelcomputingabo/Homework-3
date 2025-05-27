@@ -1,0 +1,3 @@
+/users/laskarmo/Homework-3/CMakeFiles/app.dir
+/users/laskarmo/Homework-3/CMakeFiles/edit_cache.dir
+/users/laskarmo/Homework-3/CMakeFiles/rebuild_cache.dir
