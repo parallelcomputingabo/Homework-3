@@ -1,0 +1,1 @@
+/usr/local/cuda-12.8/bin/nvcc -forward-unknown-to-host-compiler  --generate-code=arch=compute_60,code=[compute_60,sm_60] -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/app.dir/main.cu.o -o CMakeFiles/app.dir/cmake_device_link.o   -lcudadevrt -lcudart_static -lrt -lpthread -ldl 
