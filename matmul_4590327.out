@@ -1,0 +1,50 @@
+Running case 0
+Case 0 (64x64x64):
+Naive CUDA time: 0.00011264 seconds
+Tiled CUDA time: 2.56e-05 seconds
+Tiled CUDA Speedup: 4.4x
+Running case 1
+Case 1 (128x64x128):
+Naive CUDA time: 0.000110592 seconds
+Tiled CUDA time: 2.6624e-05 seconds
+Tiled CUDA Speedup: 4.15385x
+Running case 2
+Case 2 (100x128x56):
+Naive CUDA time: 0.000128 seconds
+Tiled CUDA time: 2.8672e-05 seconds
+Tiled CUDA Speedup: 4.46429x
+Running case 3
+Case 3 (128x64x128):
+Naive CUDA time: 0.000110592 seconds
+Tiled CUDA time: 2.4576e-05 seconds
+Tiled CUDA Speedup: 4.5x
+Running case 4
+Case 4 (32x128x32):
+Naive CUDA time: 0.00011776 seconds
+Tiled CUDA time: 3.1744e-05 seconds
+Tiled CUDA Speedup: 3.70968x
+Running case 5
+Case 5 (200x100x256):
+Naive CUDA time: 0.000130752 seconds
+Tiled CUDA time: 2.6784e-05 seconds
+Tiled CUDA Speedup: 4.88172x
+Running case 6
+Case 6 (256x256x256):
+Naive CUDA time: 0.000128832 seconds
+Tiled CUDA time: 3.6672e-05 seconds
+Tiled CUDA Speedup: 3.51309x
+Running case 7
+Case 7 (256x300x256):
+Naive CUDA time: 0.000135168 seconds
+Tiled CUDA time: 3.8752e-05 seconds
+Tiled CUDA Speedup: 3.48803x
+Running case 8
+Case 8 (64x128x64):
+Naive CUDA time: 0.000118784 seconds
+Tiled CUDA time: 2.7648e-05 seconds
+Tiled CUDA Speedup: 4.2963x
+Running case 9
+Case 9 (256x256x257):
+Naive CUDA time: 0.000128096 seconds
+Tiled CUDA time: 3.7056e-05 seconds
+Tiled CUDA Speedup: 3.45682x
