@@ -205,3 +205,19 @@ git push origin student-name
 
 Good luck, and enjoy accelerating matrix multiplication with CUDA!
 
+### Results
+
+| Test Case | Dimensions (\( m \times n \times p \)) | Naive CPU (s) | Blocked CPU (s) | Parallel CPU (s) | Naive CUDA (s) | Tiled CUDA (s) | Tiled CUDA Speedup (vs. Naive CUDA) | Tiled CUDA Speedup (vs. Parallel CPU) |
+|-----------|------------------------|----------------|------------------|-------------------|-----------------|------------------|
+| 0 | 64 x 64 x 64| 0.00286956 | 0.0039845 | 0.0039845 | 0.104896 | 0.083584 | 1.255x |  0.048x |
+| 1 | 128 x 64 x 128 | 0.00819703  | 0.0107341 | 0.00161662 | 0.141888 | 0.094272 | 1.505x | 0.017x |
+| 2 | 100 x 128 x 56 | 0.00591884 | 0.00705264 | 0.00257082 | 0.121024 | 0.080576 | 1.502x | 0.032x | 
+| 3 | 128 x 64 x 128 | 0.00855164 | 0.0104604 | 0.00158808 | 0.139712 | 0.095424 | 1.464x | 0.017x |
+| 4 | 32 x 128 x 32 | 0.00101901 | 0.00142778 | 0.000622604 | 0.122368 | 0.063424 | 1.93x | 0.01x |
+| 5 | 200 x 100 x 256 | 0.030972 | 0.0239394 | 0.00744395 | 0.216736 | 0.175936 | 1.23x | 0.042x |
+| 6 | 256 x 256 x 256 | 0.0574685 | 0.0826263 | 0.0242001 | 0.310656 | 0.243968 | 1.273x | 0.099x |
+| 7 | 256  x 300 x 256 | 0.0637025 | 0.0922899 | 0.0178825 | 0.298624 | 0.246816 | 1.21x | 0.072x |
+| 8 | 64 x 128 x 64 | 0.00378908 | 0.00581044 | 0.001216 | 0.124512 | 0.076128 | 1.64x | 0.016x |
+| 9 | 256 x 256 x 257 | 0.0591941 | 0.0762655 | 0.0228895 | 0.29376 | 0.248832 | 1.18x | 0.092x |
+
+The two GPU programs were executed on the CSC Mahti supercomputer, accessed via VSCode Remote-SSH. Based on the results, the tiled CUDA implementation outperformed the naive CUDA version. However, when comparing tiled CUDA with parallel CPU computations, the parallel CPU showed better performance. This can be due to the overhead in  data transfers between CPU and GPU. Further, I assume tiled CUDA might perform better if we test it with very large matrices.
