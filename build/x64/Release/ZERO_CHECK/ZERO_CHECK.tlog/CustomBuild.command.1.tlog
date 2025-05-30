@@ -1,0 +1,10 @@
+^C:\USERS\KALLE\DOCUMENTS\HOMEWORK-3\HOMEWORK-3\BUILD\CMAKEFILES\44299F1EA5F793C75A4BF3F62836517D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/kalle/Documents/Homework-3/Homework-3 -BC:/Users/kalle/Documents/Homework-3/Homework-3/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/kalle/Documents/Homework-3/Homework-3/build/app.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
