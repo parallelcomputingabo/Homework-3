@@ -1,0 +1,3 @@
+/home/tobli/abo/pprog/Homework-3/build/CMakeFiles/app.dir
+/home/tobli/abo/pprog/Homework-3/build/CMakeFiles/edit_cache.dir
+/home/tobli/abo/pprog/Homework-3/build/CMakeFiles/rebuild_cache.dir
