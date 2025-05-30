@@ -1,0 +1,3 @@
+C:/Users/User/Homework-3/cmake-build-debug-visual-studio/CMakeFiles/app.dir
+C:/Users/User/Homework-3/cmake-build-debug-visual-studio/CMakeFiles/edit_cache.dir
+C:/Users/User/Homework-3/cmake-build-debug-visual-studio/CMakeFiles/rebuild_cache.dir
