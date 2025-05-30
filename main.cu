@@ -8,7 +8,6 @@
 #include <cstring>
 #include <chrono>
 
-// Naive CUDA kernel: each thread computes one C(i,j)
 __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p) {
     uint32_t row = blockIdx.y * blockDim.y + threadIdx.y;
     uint32_t col = blockIdx.x * blockDim.x + threadIdx.x;
@@ -21,7 +20,7 @@ __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint
     }
 }
 
-// Tiled CUDA kernel: uses shared memory for A and B tiles
+// Tiled CUDA with shared memory for A and B
 __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p, uint32_t tile_width) {
     extern __shared__ float shared_mem[];
     float* As = shared_mem;
@@ -32,7 +31,6 @@ __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint
     float sum = 0.0f;
 
     for (uint32_t t = 0; t < (n + tile_width - 1) / tile_width; ++t) {
-        // Load tiles into shared memory
         uint32_t tiled_row = row;
         uint32_t tiled_col = t * tile_width + threadIdx.x;
         if (tiled_row < m && tiled_col < n)
@@ -58,7 +56,7 @@ __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint
         C[row * p + col] = sum;
 }
 
-// Helper: Read raw float matrix from file
+//Read raw float matrix
 bool read_matrix(const std::string &filename, std::vector<float> &mat, size_t size) {
     std::ifstream in(filename, std::ios::binary);
     if (!in) return false;
@@ -66,7 +64,7 @@ bool read_matrix(const std::string &filename, std::vector<float> &mat, size_t si
     return in.good();
 }
 
-// Helper: Write raw float matrix to file
+//Write float matrix
 bool write_matrix(const std::string &filename, const std::vector<float> &mat, size_t size) {
     std::ofstream out(filename, std::ios::binary);
     if (!out) return false;
@@ -74,7 +72,7 @@ bool write_matrix(const std::string &filename, const std::vector<float> &mat, si
     return out.good();
 }
 
-// Helper: Validate result against reference
+// Validate result
 bool validate_result(const std::string &result_file, const std::string &reference_file) {
     std::ifstream res(result_file, std::ios::binary);
     std::ifstream ref(reference_file, std::ios::binary);
@@ -93,7 +91,6 @@ bool validate_result(const std::string &result_file, const std::string &referenc
 }
 
 int main(int argc, char *argv[]) {
-    // Example: ./main 0 1024 1024 1024
     if (argc < 5) {
         std::cerr << "Usage: " << argv[0] << " <case_number> <m> <n> <p>\n";
         return 1;
@@ -154,7 +151,6 @@ int main(int argc, char *argv[]) {
     write_matrix(c_file_naive, h_C_naive, size_C);
     bool valid_naive = validate_result(c_file_naive, ref_file);
 
-    // --- Tiled CUDA ---
     cudaEvent_t start_tiled, stop_tiled;
     cudaEventCreate(&start_tiled);
     cudaEventCreate(&stop_tiled);
@@ -180,7 +176,7 @@ int main(int argc, char *argv[]) {
     write_matrix(c_file_tiled, h_C_tiled, size_C);
     bool valid_tiled = validate_result(c_file_tiled, ref_file);
 
-    // Print performance results
+    // Print results
     std::cout << "Case " << case_number << " (" << m << "x" << n << "x" << p << "):\n";
     std::cout << "Naive CUDA time: " << naive_cuda_time << " seconds";
     std::cout << (valid_naive ? " [VALID]\n" : " [INVALID]\n");
