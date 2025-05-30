@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/tobli/abo/pprog/Homework-3/build",
+  "command": "/opt/cuda/bin/nvcc -forward-unknown-to-host-compiler -isystem /opt/cuda/targets/x86_64-linux/include -g -std=c++17 \"--generate-code=arch=compute_60,code=[compute_60,sm_60]\" -x cu -rdc=true -c /home/tobli/abo/pprog/Homework-3/main.cu -o CMakeFiles/app.dir/main.cu.o",
+  "file": "/home/tobli/abo/pprog/Homework-3/main.cu",
+  "output": "CMakeFiles/app.dir/main.cu.o"
+}
+]
