@@ -205,3 +205,34 @@ git push origin student-name
 
 Good luck, and enjoy accelerating matrix multiplication with CUDA!
 
+# Steps to run the code
+1. Copy files to Dione
+2. Access Dione
+3. Run the following commands
+
+```bash
+module load cuda
+module load GCC
+module load cmake
+nvcc -arch=sm_70 main.cu -o main -lm
+srun -p gpu --mem=10G -t 1:00:00 ./main <test_case>
+```
+
+For both naive and tiled matmul a threadsPerBlock of 16 by 16 was used.
+For tiled matmul a tile size of 16 was used.
+File transfer time was considered for both performance measurements. 
+
+# Results
+| Test Case | Dimensions ($m \times n \times p$) | Naive CPU (s) | Blocked CPU (s) | Parallel CPU (s) | Naive CUDA (s) | Tiled CUDA (s) | Tiled CUDA Speedup (vs. Naive CUDA) | Tiled CUDA Speedup (vs. Parallel CPU) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Case 0 | 64 × 64 × 64 | 0.001092 | 0.001221 | 0.000386 | 0.000104448 | 0.000069568 | 1.50x | 5.55x |
+| Case 1 | 128 × 64 × 128 | 0.003803 | 0.004292 | 0.001009 | 0.000164928 | 0.000141472 | 1.17x | 7.13x |
+| Case 2 | 100 × 128 × 56 | 0.002663 | 0.002945 | 0.000933999 | 0.000132320 | 0.000114848 | 1.15x | 8.13x |
+| Case 3 | 128 × 64 × 128 | 0.00387 | 0.00427 | 0.001542 | 0.000165760 | 0.000124928 | 1.33x | 12.34x |
+| Case 4 | 32 × 128 × 32 | 0.000464 | 0.000565 | 0.00024 | 0.000093344 | 0.000080416 | 1.16x | 2.98x |
+| Case 5 | 200 × 100 × 256 | 0.018409 | 0.021625 | 0.004873 | 0.000314528 | 0.000287104 | 1.10x | 16.97x |
+| Case 6 | 256 × 256 × 256 | 0.059081 | 0.068912 | 0.014825 | 0.000478688 | 0.000484800 | 0.99x | 30.58x |
+| Case 7 | 256 × 300 × 256 | 0.070174 | 0.082439 | 0.019428 | 0.000489696 | 0.000509376 | 0.96x | 38.14x |
+| Case 8 | 64 × 128 × 64 | 0.001954 | 0.002169 | 0.000576 | 0.000123552 | 0.000092864 | 1.33x | 6.20x |
+| Case 9 | 256 × 256 × 257 | 0.059597 | 0.06816 | 0.013344 | 0.000472896 | 0.000455456 | 1.04x | 29.30x |
+
