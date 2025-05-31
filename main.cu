@@ -72,6 +72,24 @@ __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint
     }
 }
 
+// Read a matrix from text file (row-major)
+float* read_matrix(const std::string& path, uint32_t& rows, uint32_t& cols) {
+    std::ifstream in(path);
+    if (!in) {
+        std::cerr << "Error: cannot open file " << path << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
+    in >> rows >> cols;
+    float* mat = new float[static_cast<size_t>(rows) * cols];
+    for (uint32_t i = 0; i < rows * cols; ++i) {
+        double temp;
+        in >> temp;
+        mat[i] = static_cast<float>(temp);
+    }
+    in.close();
+    return mat;
+}
+
 bool validate_result(const std::string &result_file, const std::string &reference_file) {
     // TODO: Implement result validation (same as Assignment 2)
 }
