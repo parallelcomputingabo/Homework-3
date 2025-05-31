@@ -108,8 +108,36 @@ void write_matrix(const std::string& path, const float* mat, uint32_t rows, uint
     out.close();
 }
 
+// Result validation
 bool validate_result(const std::string &result_file, const std::string &reference_file) {
-    // TODO: Implement result validation (same as Assignment 2)
+    uint32_t rows1, cols1, rows2, cols2;
+    
+    float* result = read_matrix(result_file, rows1, cols1);
+    float* reference = read_matrix(reference_file, rows2, cols2);
+    
+    if (rows1 != rows2 || cols1 != cols2) {
+        std::cerr << "Matrix dimensions don't match: (" << rows1 << "x" << cols1 
+                  << ") vs (" << rows2 << "x" << cols2 << ")" << std::endl;
+        delete[] result;
+        delete[] reference;
+        return false;
+    }
+    
+    const float epsilon = 1e-5f;
+    for (uint32_t i = 0; i < rows1 * cols1; ++i) {
+        if (std::abs(result[i] - reference[i]) > epsilon) {
+            std::cout << "Mismatch at index " << i << ": " 
+                      << "Result = " << result[i] << ", Expected = " << reference[i] 
+                      << ", Diff = " << std::abs(result[i] - reference[i]) << std::endl;
+            delete[] result;
+            delete[] reference;
+            return false;
+        }
+    }
+    
+    delete[] result;
+    delete[] reference;
+    return true;
 }
 
 int main(int argc, char *argv[]) {
