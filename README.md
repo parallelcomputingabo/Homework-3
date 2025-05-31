@@ -1,6 +1,6 @@
 This file contains the results and details of my work.
 
-I have designed and executed my solution to run on Mahti super computer within the same project of the workshop.
+I have designed and executed my solution to run on Mahti-CSC.
 
 
 ## Performance Results (Including Transfers)
@@ -20,7 +20,7 @@ I have designed and executed my solution to run on Mahti super computer within t
 | 8         | 64 × 128 × 64          | 0.001738      | 0.001612        | 0.000505         | 0.0001313      | 0.0000856      | 1.53                          | 5.90                            |
 | 9         | 256 × 256 × 257        | 0.056782      | 0.053043        | 0.010905         | 0.0002697      | 0.0002334      | 1.16                          | 46.73                           |
 
-2nd table is for averaged results with error check overhead implemented (3 runs) comparing GPU implementations (with transfer times) against Assignment 2 CPU results.
+2nd table is for averaged results with error check overhead implemented (3 runs), comparing GPU implementations (with transfer times) against Assignment 2 CPU results.
 
 | Case | Size            | Naive CPU (s) | Blocked CPU (s) | Parallel CPU (s) | Naive CUDA (s) | Tiled CUDA (s) | Speedup (vs Naive CUDA) | Speedup (vs Parallel CPU) |
 |:----:|:----------------|--------------:|----------------:|-----------------:|---------------:|---------------:|------------------------:|--------------------------:|
@@ -39,7 +39,7 @@ I have designed and executed my solution to run on Mahti super computer within t
 For the tiled matrix, I have used TILE_WIDTH of 16, I tried 32 but 16 was slightly faster in most of cases (I think because we have relatively small matrices). 
 
 
-Naive results go in data/<case>/result.raw, and the tiled version is saved as data/<case>/result_tiled.raw. Neither overwrites the original output.raw.
+Naive results go in data/<case>/result.raw, and the tiled version is saved as data/<case>/result_tiled.raw.
 
 
 ## Interpretation
@@ -63,7 +63,7 @@ Naive results go in data/<case>/result.raw, and the tiled version is saved as da
 ## Dependencies: 
 - CUDA Toolkit ≥ 11.5.0
 - NVIDIA A100 or compatible GPU
-- CSC's host C++ compiler with its default standard
+- CSC's host GCC/G++ compiler with its default standard
 
 ## Build Instructions:
 Refer to the "run_naive.sh" file.
@@ -109,12 +109,12 @@ Loads the CUDA 11.5 module, navigates to the project directory, then iterates ov
 
 The SLURM script passes data/$i/result.raw as the output filename only for the naive kernel, then internally it always writes the tiled output to data/$i/result_tiled.raw without needing a second argument.
 
-Output (stdout/stderr) goes to naive_gpu.out.
+Output (stdout/stderr) goes to naive_gpu.out
 
 
 
 ## Time calculation: 
-“Time with transfers” is to record wall-clock from just before copying A & B Host→Device, through the kernel launch, until after you copy C Device→Host. 
+“Time with transfers” is to record wall-clock from just before copying A & B Host→Device, through the kernel launch, until after copying C Device → Host. 
 For the tiled matrix time calculation, I had to re-copy A & B from Host -> Device to give a fair comparison. 
 
 
