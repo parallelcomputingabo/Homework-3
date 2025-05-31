@@ -17,7 +17,16 @@ bool validate_result(const std::string &result_file, const std::string &referenc
 }
 
 int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        std::cerr << "Usage: " << argv[0] << " <case_number>" << std::endl;
+        return EXIT_FAILURE;
+    }
 
+    int case_number = std::atoi(argv[1]);
+    if (case_number < 0 || case_number > 9) {
+        std::cerr << "Case number must be between 0 and 9" << std::endl;
+        return EXIT_FAILURE;
+    }
 
     // TODO: Read input0.raw (matrix A) and input1.raw (matrix B)
 
