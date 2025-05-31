@@ -205,3 +205,29 @@ git push origin student-name
 
 Good luck, and enjoy accelerating matrix multiplication with CUDA!
 
+### Results
+In order to get more objective results, all of these are an average across 5 runs (naive CPU, blocked CPU, parallel CPU, naive CUDA, tiled CUDA, speedups). 
+Results for naive CPU, blocked CPU, and parallel CPU I copied from the previous assignment (meaning they were not re-run).
+I tested with tile sizes: 16, 32, and 64. I found that there were no significant differences regarding speedup, possibly due to matrix dimensions being small. True speed up differences and memory management come to light only when matrices are big enough to account for the overhead.
+
+I provided a shell script **run_experiments.sh** which will run all 9 cases 5 times and save that to **results.txt**. Shell script is in the root folder, and results file will be created in a new directory called *results*.
+I provided **results-assignment2.csv** file with results from the previous assignment in csv format. Next to them we have **results-assignment3.csv** for the results of this assignment. Both results are provided in order to do a join and calculate Tiled CUDA Speedup vs. Parallel CPU. Both are inside of *results* directory.
+
+Lastly, I provided a **results.ipynb** notebook to perform the join of two csv files, calculate Tiled CUDA Speedup vs. Parallel CPU, and finally calculate average metrics. This notebook is also located in the *results* directory.
+
+Tiled CUDA being faster than Naive CUDA is not surprising, as it makes use of shared memory on GPUs, which is much faster than global memory and reduced the overhead of fetching data. Tiled CUDA vs Parallel CPU was a bit surprising, as Tiled CUDA performs worse. That just highlights the bottlenecks of data transfer between CPU and GPU. For cases 6, 7, and 9, which have the biggest matrices, Tiled CUDA still performs worse but only slightly, which again suggest that true speedup power can be seen only with large enough matrices.
+
+I ran these tests on Puhti, and commands that I used are given in the file **puhti_commands**. CMake file had to be configured accordingly (it was giving some errors about platform mismatch).
+
+| Test Case | Dimensions (m × n × p) | Naive CPU (s) | Blocked CPU (s) | Parallel CPU (s) | Naive CUDA (s) | Tiled CUDA (s) | Tiled CUDA Speedup (vs. Naive CUDA) (x) | Tiled CUDA Speedup (vs. Parallel CPU) (x) |
+|-----------|------------------------|---------------|-----------------|------------------|----------------|----------------|-------------------------------------|---------------------------------------|
+| 0         | 64  × 64  × 64         | 0.001820      | 0.003150        | 0.001971         | 0.147885       | 0.052384       | 2.819076                            | 0.037568                              |
+| 1         | 128 × 64  × 128        | 0.007134      | 0.012213        | 0.006315         | 0.179840       | 0.061050       | 2.946002                            | 0.103452                              |
+| 2         | 100 x 128 x 56         | 0.004972      | 0.007658        | 0.004033         | 0.155040       | 0.053658       | 2.890278                            | 0.075254                              |
+| 3         | 128 x 64  x 128        | 0.007388      | 0.011238        | 0.006139         | 0.182496       | 0.061440       | 2.970274                            | 0.099949                              |
+| 4         | 32  x 128 x 32         | 0.000872      | 0.001411        | 0.001214         | 0.144858       | 0.048442       | 2.992014                            | 0.025087                              |
+| 5         | 200 x 100 x 256        | 0.035313      | 0.056534        | 0.028929         | 0.281901       | 0.102822       | 2.757510                            | 0.283063                              |
+| 6         | 256 × 256 × 256        | 0.118653      | 0.178597        | 0.098928         | 0.311059       | 0.123488       | 2.522300                            | 0.810078                              |
+| 7         | 256 × 300 × 256        | 0.138863      | 0.207555        | 0.118014         | 0.299462       | 0.132384       | 2.265972                            | 0.893724                              |
+| 8         | 64  x 128 x 64         | 0.003496      | 0.005769        | 0.003319         | 0.138234       | 0.050682       | 2.729630                            | 0.065424                              |
+| 9         | 256 x 256 x 257        | 0.120380      | 0.179924        | 0.107247         | 0.294950       | 0.114016       | 2.587976                            | 0.941563                              |

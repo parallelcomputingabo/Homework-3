@@ -1,0 +1,12 @@
+srun -A project_2013968 -p gpu -t 04:00:00 -c 1 --mem 5G --gres=gpu:v100:1 --pty bash
+
+module load gcc/13.2.0
+module load cmake/3.28.6
+module load cuda
+
+export LD_LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64:$LD_LIBRARY_PATH
+
+mkdir -p build
+cd build
+cmake ..
+make -j

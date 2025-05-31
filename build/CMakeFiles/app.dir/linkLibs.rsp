@@ -1,0 +1,1 @@
+ "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/libcudart.so" -lpthread -ldl /usr/lib64/librt.so -lcudadevrt -lcudart_static -lrt -lpthread -ldl 
