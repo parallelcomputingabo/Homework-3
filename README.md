@@ -205,6 +205,23 @@ git push origin student-name
 
 Good luck, and enjoy accelerating matrix multiplication with CUDA!
 
+# Steps to run the code
+1. Copy files to Dione
+2. Access Dione
+3. Run the following commands
+
+```bash
+module load cuda
+module load GCC
+module load cmake
+nvcc -arch=sm_70 main.cu -o main -lm
+srun -p gpu --mem=10G -t 1:00:00 ./main <test_case>
+```
+
+For both naive and tiled matmul a threadsPerBlock of 16 by 16 was used.
+For tiled matmul a tile size of 16 was used.
+File transfer time was considered for both performance measurements. 
+
 # Results
 | Test Case | Dimensions ($m \times n \times p$) | Naive CPU (s) | Blocked CPU (s) | Parallel CPU (s) | Naive CUDA (s) | Tiled CUDA (s) | Tiled CUDA Speedup (vs. Naive CUDA) | Tiled CUDA Speedup (vs. Parallel CPU) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

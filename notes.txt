@@ -1,7 +1,0 @@
-module load cuda
-module load GCC
-module load cmake
-
-nvcc -arch=sm_70 main.cu -o main -lm
-
-srun -p gpu --mem=10G -t 1:00:00 ./main 0

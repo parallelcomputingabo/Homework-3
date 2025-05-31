@@ -7,8 +7,20 @@
 
 #define TILE_WIDTH 16
 
+/**
+ * @brief Naive implementation of matrix multiplication using CUDA.
+ *
+ * Each thread computes one element of the output matrix C.
+ *
+ * @param C Pointer to the output matrix C (m x p) in device memory.
+ * @param A Pointer to the input matrix A (m x n) in device memory.
+ * @param B Pointer to the input matrix B (n x p) in device memory.
+ * @param m Number of rows in matrix A and output matrix C.
+ * @param n Number of columns in matrix A and rows in matrix B.
+ * @param p Number of columns in matrix B and output matrix C.
+ */
 __global__ void naive_cuda_matmul(float* C, float* A, float* B, uint32_t m, uint32_t n, uint32_t p) {
-    // Calculate the global row (i) and column (j) for this thread
+    // Calculate the global row i and column j for current thread
     uint32_t i = blockIdx.y * blockDim.y + threadIdx.y;
     uint32_t j = blockIdx.x * blockDim.x + threadIdx.x;
 
@@ -31,19 +43,39 @@ __global__ void naive_cuda_matmul(float* C, float* A, float* B, uint32_t m, uint
     }
 }
 
+/**
+ * @brief Tiled implementation of matrix multiplication using CUDA and shared memory.
+ *
+ * Each thread block computes one tile of the matrix C.
+ * Threads within a block load tiles of matrices A and B into shared memory.
+ *
+ * @param C Pointer to the output matrix C (m x p) in device memory.
+ * @param A Pointer to the input matrix A ($m \times n$) in device memory.
+ * @param B Pointer to the input matrix B ($n \times p$) in device memory.
+ * @param m Number of rows in matrix A and output matrix C.
+ * @param n Number of columns in matrix A and rows in matrix B (the shared dimension).
+ * @param p Number of columns in matrix B and output matrix C.
+ * @param tile_width Not used, TILE_WIDTH is defined as a constant.
+ */
 __global__ void tiled_cuda_matmul(float* C, float* A, float* B, uint32_t m, uint32_t n, uint32_t p, uint32_t tile_width) {
+    // Shared memory arrays to store tiles of A and B
     __shared__ float A_s[TILE_WIDTH][TILE_WIDTH];
     __shared__ float B_s[TILE_WIDTH][TILE_WIDTH];
 
+    // Threads indices within current thread block
     int tx = threadIdx.x;
     int ty = threadIdx.y;
 
+    // Global row and column of C
     int row = blockIdx.y * TILE_WIDTH + ty;
     int col = blockIdx.x * TILE_WIDTH + tx;
 
     float C_value = 0.0f;
-
+    // Loop over the tiles of A and B
+    // ph is the tile index in the shared dimension
     for (int ph = 0; ph < (n + TILE_WIDTH - 1) / TILE_WIDTH; ++ph) {
+
+        // Load tiles of A and B into shared memory
         int a_load_row = row;
         int a_load_col = ph * TILE_WIDTH + tx;
 
@@ -63,16 +95,17 @@ __global__ void tiled_cuda_matmul(float* C, float* A, float* B, uint32_t m, uint
         else {
             B_s[ty][tx] = 0.0f;
         }
-
+        // Synchronize threads
         __syncthreads();
 
+        // Compute the partial sum for tile
         for (int k = 0; k < TILE_WIDTH; ++k) {
             C_value += A_s[ty][k] * B_s[k][tx];
         }
-
+        // Synchronize threads
         __syncthreads();
     }
-
+    // Round the value to two decimals if the output has more than two decimals
     if (row < m && col < p) {
         float temp_100 = C_value * 100.0f;
         if (floorf(temp_100) != temp_100) {
@@ -228,7 +261,10 @@ int main(int argc, char* argv[])
         p = std::stoi(part2);
     }
 
-    // Allocate memory for matrices A, B, and C using new or malloc
+    std::cout << "Matrix A dimensions: " << m << " x " << n << std::endl;
+    std::cout << "Matrix B dimensions: " << n << " x " << p << std::endl;
+
+    // Allocate memory for matrices A, B, and C
     float* A = (float*)malloc(m * n * sizeof(float));
     float* B = (float*)malloc(n * p * sizeof(float));
 
@@ -256,11 +292,9 @@ int main(int argc, char* argv[])
             ss >> B[i * p + j];
         }
     }
-
+    // Allocate memory for result matrices
     float* C_cuda_naive = (float*)malloc(m * p * sizeof(float));
     float* C_cuda_tile = (float*)malloc(m * p * sizeof(float));
-
-    // TODO: Use cudaMalloc and cudaMemcpy for GPU memory
 
     // Device Pointers
     float* A_d, * B_d, * C_d;
@@ -287,6 +321,7 @@ int main(int argc, char* argv[])
         std::cerr << "Failed to allocate device memory for C_d: " << cudaGetErrorString(err) << std::endl;
     }
 
+    // Measure execution time
     cudaEvent_t start_event, stop_event;
     cudaEventCreate(&start_event);
     cudaEventCreate(&stop_event);
@@ -303,6 +338,7 @@ int main(int argc, char* argv[])
         std::cerr << "Failed to copy B from host to device: " << cudaGetErrorString(err) << std::endl;
     }
 
+    // Launch the naive CUDA implementation
     dim3 threadsPerBlock(16, 16);
     dim3 numBlocks((p + threadsPerBlock.x - 1) / threadsPerBlock.x,
         (m + threadsPerBlock.y - 1) / threadsPerBlock.y);
@@ -313,10 +349,11 @@ int main(int argc, char* argv[])
     if (err != cudaSuccess) {
         std::cerr << "Failed to copy C from device to host:" << cudaGetErrorString(err) << std::endl;
     }
-
+    // Stop execution time
     cudaEventRecord(stop_event, 0);
     cudaEventSynchronize(stop_event);
 
+    // Write result to file and validate
     write_result(result_file, C_cuda_naive, m, p);
     bool naive_correct = validate_result(result_file, reference_file);
     if (!naive_correct) {
@@ -330,9 +367,11 @@ int main(int argc, char* argv[])
         std::cout << "Naive CUDA time: " << seconds << " s" << std::endl;
     }
 
+    // Reset timing events
     cudaEventDestroy(start_event);
     cudaEventDestroy(stop_event);
 
+    // Measure execution time
     cudaEventCreate(&start_event);
     cudaEventCreate(&stop_event);
     cudaEventRecord(start_event, 0);
@@ -348,6 +387,7 @@ int main(int argc, char* argv[])
         std::cerr << "Failed to copy B from host to device: " << cudaGetErrorString(err) << std::endl;
     }
 
+    // Launch the tiled CUDA implementation
     dim3 threadsPerBlock_tiled(TILE_WIDTH, TILE_WIDTH);
     dim3 numBlocks_tiled((p + TILE_WIDTH - 1) / TILE_WIDTH, (m + TILE_WIDTH - 1) / TILE_WIDTH);
 
@@ -359,9 +399,11 @@ int main(int argc, char* argv[])
         std::cerr << "Failed to copy C from device to host:" << cudaGetErrorString(err) << std::endl;
     }
 
+    // Stop execution time
     cudaEventRecord(stop_event, 0);
     cudaEventSynchronize(stop_event);
 
+    // Write result to file and validate
     write_result(result_file, C_cuda_tile, m, p);
     bool tiled_correct = validate_result(result_file, reference_file);
     if (!tiled_correct) {
@@ -374,10 +416,10 @@ int main(int argc, char* argv[])
         std::cout << "Tiled CUDA time: " << seconds << " s" << std::endl;
     }
 
+    // Clean up
     cudaEventDestroy(start_event);
     cudaEventDestroy(stop_event);
 
-    // Clean up
     free(A);
     free(B);
     free(C_cuda_naive);
