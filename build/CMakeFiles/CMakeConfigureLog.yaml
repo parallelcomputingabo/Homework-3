@@ -1,0 +1,958 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 4.18.0-553.27.1.el8_10.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /scratch/project_2011942/p/build/CMakeFiles/3.28.6/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+      nvcc: NVIDIA (R) Cuda compiler driver
+      Copyright (c) 2005-2024 NVIDIA Corporation
+      Built on Fri_Jun_14_16:34:21_PDT_2024
+      Cuda compilation tools, release 12.6, V12.6.20
+      Build cuda_12.6.r12.6/compiler.34431801_0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:53 (__determine_compiler_id_test)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCUDACompiler.cmake:135 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+      Compiler: /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/nvcc 
+      Build flags: 
+      Id flags: --keep;--keep-dir;tmp -v
+      
+      The output was:
+      0
+      #$ _NVVM_BRANCH_=nvvm
+      #$ _SPACE_= 
+      #$ _CUDART_=cudart
+      #$ _HERE_=/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin
+      #$ _THERE_=/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin
+      #$ _TARGET_SIZE_=
+      #$ _TARGET_DIR_=
+      #$ _TARGET_DIR_=targets/x86_64-linux
+      #$ TOP=/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/..
+      #$ CICC_PATH=/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../nvvm/bin
+      #$ NVVMIR_LIBRARY_DIR=/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../nvvm/libdevice
+      #$ LD_LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../lib:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib
+      #$ PATH=/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../nvvm/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/bin/intel64:/users/akcayhar/.local/bin:/users/akcayhar/bin:/appl/opt/csc-cli-utils/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/appl/bin
+      #$ INCLUDES="-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"  
+      #$ LIBRARIES=  "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"
+      #$ CUDAFE_FLAGS=
+      #$ PTXAS_FLAGS=
+      #$ rm tmp/a_dlink.reg.c
+      #$ gcc -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      #$ cudafe++ --c++17 --gnu_version=130200 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/scratch/project_2011942/p/build/CMakeFiles/3.28.6/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      #$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" 
+      #$ "$CICC_PATH/cicc" --c++17 --gnu_version=130200 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/scratch/project_2011942/p/build/CMakeFiles/3.28.6/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"
+      #$ ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" 
+      #$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+      #$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -Wno-psabi "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" 
+      #$ nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"
+      #$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+      #$ gcc -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  -Wno-psabi "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/crt/link.stub" -o "tmp/a_dlink.o" 
+      #$ g++ -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" 
+      
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.out"
+      
+      The CUDA compiler identification is NVIDIA, found in:
+        /scratch/project_2011942/p/build/CMakeFiles/3.28.6/CompilerIdCUDA/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:128 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCUDACompiler.cmake:246 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA nvcc implicit link information:
+        found 'PATH=' string: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../nvvm/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/bin/intel64:/users/akcayhar/.local/bin:/users/akcayhar/bin:/appl/opt/csc-cli-utils/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/appl/bin]
+        found 'LIBRARIES=' string: ["-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"]
+        found 'INCLUDES=' string: ["-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"  ]
+        considering line: [#$ rm tmp/a_dlink.reg.c]
+        considering line: [gcc -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [cudafe++ --c++17 --gnu_version=130200 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/scratch/project_2011942/p/build/CMakeFiles/3.28.6/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: ["$CICC_PATH/cicc" --c++17 --gnu_version=130200 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/scratch/project_2011942/p/build/CMakeFiles/3.28.6/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+        considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -Wno-psabi "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+        considering line: [nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: [gcc -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  -Wno-psabi "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+        considering line: [g++ -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          extracted link line: [g++ -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+        considering line: []
+        extracted link launcher name: [g++]
+        found link launcher absolute path: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++]
+      
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld g++ -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [g++] ==> ignore
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-D__NV_LEGACY_LAUNCH] ==> ignore
+          arg [-m64] ==> ignore
+          arg [-Wl,--start-group] ==> ignore
+          arg [tmp/a_dlink.o] ==> ignore
+          arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs]
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib]
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-Wl,--end-group] ==> ignore
+          arg [-o] ==> ignore
+          arg [a.out] ==> ignore
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+        implicit objs: []
+        implicit dirs: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs;/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:146 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCUDACompiler.cmake:246 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA nvcc include information:
+        found 'PATH=' string: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../nvvm/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin:/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/bin/intel64:/users/akcayhar/.local/bin:/users/akcayhar/bin:/appl/opt/csc-cli-utils/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/appl/bin]
+        found 'LIBRARIES=' string: ["-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"]
+        found 'INCLUDES=' string: ["-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"  ]
+        considering line: [#$ rm tmp/a_dlink.reg.c]
+        considering line: [gcc -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [cudafe++ --c++17 --gnu_version=130200 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/scratch/project_2011942/p/build/CMakeFiles/3.28.6/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: ["$CICC_PATH/cicc" --c++17 --gnu_version=130200 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/scratch/project_2011942/p/build/CMakeFiles/3.28.6/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+        considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -Wno-psabi "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+        considering line: [nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: [gcc -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  -Wno-psabi "-I/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=20 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+        considering line: [g++ -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          extracted link line: [g++ -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+        considering line: []
+        extracted link launcher name: [g++]
+        found link launcher absolute path: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++]
+      
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld g++ -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs" "-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [g++] ==> ignore
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-D__NV_LEGACY_LAUNCH] ==> ignore
+          arg [-m64] ==> ignore
+          arg [-Wl,--start-group] ==> ignore
+          arg [tmp/a_dlink.o] ==> ignore
+          arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs]
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib]
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-Wl,--end-group] ==> ignore
+          arg [-o] ==> ignore
+          arg [a.out] ==> ignore
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib/stubs] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/lib] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+        implicit objs: []
+        implicit dirs: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs;/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:60 (try_compile)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-afJkHS"
+      binary: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-afJkHS"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-afJkHS'
+        
+        Run Build Command(s): /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e87d3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e87d3.dir/build.make CMakeFiles/cmTC_e87d3.dir/build
+        gmake[1]: Entering directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-afJkHS'
+        Building CXX object CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++   -v -o CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o -c /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs
+        COLLECT_GCC=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++
+        Target: x86_64-pc-linux-gnu
+        Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Spack GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_e87d3.dir/'
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1plus -quiet -v -D_GNU_SOURCE /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e87d3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/akcayhar/28364614/ccg0cwUe.s
+        GNU C++17 (Spack GCC) version 13.2.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 8.5.0 20210514 (Red Hat 8.5.0-10), GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include
+         /appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include
+         /usr/local/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed
+         /usr/include
+        End of search list.
+        Compiler executable checksum: a021b4756b74d78e25b2bf0dd1db674a
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_e87d3.dir/'
+         /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as -v --64 -o CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o /tmp/akcayhar/28364614/ccg0cwUe.s
+        GNU assembler version 2.42 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.42
+        COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_e87d3
+        /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e87d3.dir/link.txt --verbose=1
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++  -v CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_e87d3 
+        Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs
+        COLLECT_GCC=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++
+        COLLECT_LTO_WRAPPER=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Spack GCC) 
+        COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e87d3' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'cmTC_e87d3.'
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/collect2 -plugin /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/liblto_plugin.so -plugin-opt=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/akcayhar/28364614/ccjjhtdu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e87d3 /lib/../lib64/crt1.o /lib/../lib64/crti.o /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o -L/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64 -L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../.. -rpath /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e87d3' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'cmTC_e87d3.'
+        gmake[1]: Leaving directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-afJkHS'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:130 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include]
+          add: [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include]
+          add: [/usr/local/include]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include]
+        collapse include dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include] ==> [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0/x86_64-pc-linux-gnu]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0/backward]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include;/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0/x86_64-pc-linux-gnu;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0/backward;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include;/usr/local/include;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:162 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-afJkHS']
+        ignore line: []
+        ignore line: [Run Build Command(s): /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e87d3/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_e87d3.dir/build.make CMakeFiles/cmTC_e87d3.dir/build]
+        ignore line: [gmake[1]: Entering directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-afJkHS']
+        ignore line: [Building CXX object CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++   -v -o CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o -c /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs]
+        ignore line: [COLLECT_GCC=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Spack GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_e87d3.dir/']
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1plus -quiet -v -D_GNU_SOURCE /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e87d3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/akcayhar/28364614/ccg0cwUe.s]
+        ignore line: [GNU C++17 (Spack GCC) version 13.2.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 8.5.0 20210514 (Red Hat 8.5.0-10)  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include]
+        ignore line: [ /appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: a021b4756b74d78e25b2bf0dd1db674a]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_e87d3.dir/']
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as -v --64 -o CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o /tmp/akcayhar/28364614/ccg0cwUe.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.42]
+        ignore line: [COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_e87d3]
+        ignore line: [/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e87d3.dir/link.txt --verbose=1]
+        ignore line: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++  -v CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_e87d3 ]
+        ignore line: [Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs]
+        ignore line: [COLLECT_GCC=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Spack GCC) ]
+        ignore line: [COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e87d3' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'cmTC_e87d3.']
+        link line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/collect2 -plugin /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/liblto_plugin.so -plugin-opt=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/akcayhar/28364614/ccjjhtdu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e87d3 /lib/../lib64/crt1.o /lib/../lib64/crti.o /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o -L/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64 -L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../.. -rpath /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/akcayhar/28364614/ccjjhtdu.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_e87d3] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o] ==> obj [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib]
+          arg [-L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64] ==> dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64]
+          arg [-L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib] ==> dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib]
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..]
+          arg [-rpath] ==> ignore
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64] ==> ignore
+          arg [CMakeFiles/cmTC_e87d3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o] ==> obj [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib]
+        collapse library dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64] ==> [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64]
+        collapse library dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib] ==> [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0;/lib64;/usr/lib64;/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib;/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64;/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib;/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:60 (try_compile)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CUDA compiler ABI info"
+    directories:
+      source: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-pLGAwi"
+      binary: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-pLGAwi"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_CUDA_RUNTIME_LIBRARY: "Static"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CUDA_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-pLGAwi'
+        
+        Run Build Command(s): /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_35784/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_35784.dir/build.make CMakeFiles/cmTC_35784.dir/build
+        gmake[1]: Entering directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-pLGAwi'
+        Building CUDA object CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o
+        /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/nvcc -forward-unknown-to-host-compiler   "--generate-code=arch=compute_52,code=[compute_52,sm_52]"   -Xcompiler=-v -MD -MT CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o -MF CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o.d -x cu -c /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o
+        Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs
+        COLLECT_GCC=gcc
+        Target: x86_64-pc-linux-gnu
+        Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Spack GCC) 
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=6' '-D' '__CUDACC_VER_BUILD__=20' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=6' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' '/tmp/akcayhar/28364614/'
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1plus -E -quiet -v -I /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D __NV_LEGACY_LAUNCH -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=6 -D __CUDACC_VER_BUILD__=20 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=6 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCUDACompilerABI.cu -o /tmp/akcayhar/28364614/tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.ii -m64 -mtune=generic -march=x86-64 -dumpdir /tmp/akcayhar/28364614/ -dumpbase tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.cu -dumpbase-ext .cu
+        ignoring nonexistent directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include"
+        ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include
+         /appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include
+         /usr/local/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed
+         /usr/include
+        End of search list.
+        COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=6' '-D' '__CUDACC_VER_BUILD__=20' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=6' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.'
+        Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs
+        COLLECT_GCC=gcc
+        Target: x86_64-pc-linux-gnu
+        Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Spack GCC) 
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=6' '-D' '__CUDACC_VER_BUILD__=20' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=6' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' '/tmp/akcayhar/28364614/'
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1plus -E -quiet -v -I /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH_LIST__=520 -D __NV_LEGACY_LAUNCH -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=6 -D __CUDACC_VER_BUILD__=20 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=6 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCUDACompilerABI.cu -o /tmp/akcayhar/28364614/tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.ii -m64 -mtune=generic -march=x86-64 -dumpdir /tmp/akcayhar/28364614/ -dumpbase tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.cu -dumpbase-ext .cu
+        ignoring nonexistent directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include"
+        ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include
+         /appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include
+         /usr/local/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed
+         /usr/include
+        End of search list.
+        COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=6' '-D' '__CUDACC_VER_BUILD__=20' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=6' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.'
+        Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs
+        COLLECT_GCC=gcc
+        Target: x86_64-pc-linux-gnu
+        Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Spack GCC) 
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-Wno-psabi' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_35784.dir/'
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1plus -quiet -v -I /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D __NV_LEGACY_LAUNCH -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/akcayhar/28364614/tmpxft_001f6205_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpdir CMakeFiles/cmTC_35784.dir/ -dumpbase CMakeCUDACompilerABI.cu.cpp -dumpbase-ext .cpp -m64 -mtune=generic -march=x86-64 -Wno-psabi -version -o /tmp/akcayhar/28364614/ccb9mJRo.s
+        GNU C++17 (Spack GCC) version 13.2.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 8.5.0 20210514 (Red Hat 8.5.0-10), GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include"
+        ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include
+         /appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include
+         /usr/local/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed
+         /usr/include
+        End of search list.
+        Compiler executable checksum: a021b4756b74d78e25b2bf0dd1db674a
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-Wno-psabi' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_35784.dir/'
+         /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as -v -I /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o /tmp/akcayhar/28364614/ccb9mJRo.s
+        GNU assembler version 2.42 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.42
+        COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-Wno-psabi' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.'
+        Linking CUDA executable cmTC_35784
+        /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35784.dir/link.txt --verbose=1
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++  -v CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o -o cmTC_35784  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs" -L"/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib"
+        Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs
+        COLLECT_GCC=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++
+        COLLECT_LTO_WRAPPER=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Spack GCC) 
+        COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_35784' '-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs' '-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'cmTC_35784.'
+         /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/collect2 -plugin /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/liblto_plugin.so -plugin-opt=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/akcayhar/28364614/ccsuLKxW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_35784 /lib/../lib64/crt1.o /lib/../lib64/crti.o /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib -L/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64 -L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../.. -rpath /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_35784' '-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs' '-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'cmTC_35784.'
+        gmake[1]: Leaving directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-pLGAwi'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:130 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include]
+          add: [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include]
+          add: [/usr/local/include]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include]
+          add: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/include]
+        collapse include dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include] ==> [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0/x86_64-pc-linux-gnu]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0/backward]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include]
+        collapse include dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/include;/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0/x86_64-pc-linux-gnu;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include/c++/13.2.0/backward;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include;/usr/local/include;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:162 (message)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-pLGAwi']
+        ignore line: []
+        ignore line: [Run Build Command(s): /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_35784/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_35784.dir/build.make CMakeFiles/cmTC_35784.dir/build]
+        ignore line: [gmake[1]: Entering directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-pLGAwi']
+        ignore line: [Building CUDA object CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o]
+        ignore line: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/nvcc -forward-unknown-to-host-compiler   "--generate-code=arch=compute_52 code=[compute_52 sm_52]"   -Xcompiler=-v -MD -MT CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o -MF CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o.d -x cu -c /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o]
+        ignore line: [Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs]
+        ignore line: [COLLECT_GCC=gcc]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Spack GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=6' '-D' '__CUDACC_VER_BUILD__=20' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=6' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' '/tmp/akcayhar/28364614/']
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1plus -E -quiet -v -I /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D __NV_LEGACY_LAUNCH -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=6 -D __CUDACC_VER_BUILD__=20 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=6 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCUDACompilerABI.cu -o /tmp/akcayhar/28364614/tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.ii -m64 -mtune=generic -march=x86-64 -dumpdir /tmp/akcayhar/28364614/ -dumpbase tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.cu -dumpbase-ext .cu]
+        ignore line: [ignoring nonexistent directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include"]
+        ignore line: [ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include]
+        ignore line: [ /appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=6' '-D' '__CUDACC_VER_BUILD__=20' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=6' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-7_CMakeCUDACompilerABI.cpp1.']
+        ignore line: [Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs]
+        ignore line: [COLLECT_GCC=gcc]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Spack GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=6' '-D' '__CUDACC_VER_BUILD__=20' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=6' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' '/tmp/akcayhar/28364614/']
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1plus -E -quiet -v -I /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH_LIST__=520 -D __NV_LEGACY_LAUNCH -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=6 -D __CUDACC_VER_BUILD__=20 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=6 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CMakeCUDACompilerABI.cu -o /tmp/akcayhar/28364614/tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.ii -m64 -mtune=generic -march=x86-64 -dumpdir /tmp/akcayhar/28364614/ -dumpbase tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.cu -dumpbase-ext .cu]
+        ignore line: [ignoring nonexistent directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include"]
+        ignore line: [ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include]
+        ignore line: [ /appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=6' '-D' '__CUDACC_VER_BUILD__=20' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=6' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' '/tmp/akcayhar/28364614/tmpxft_001f6205_00000000-5_CMakeCUDACompilerABI.cpp4.']
+        ignore line: [Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs]
+        ignore line: [COLLECT_GCC=gcc]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Spack GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-Wno-psabi' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_35784.dir/']
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1plus -quiet -v -I /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D __NV_LEGACY_LAUNCH -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/akcayhar/28364614/tmpxft_001f6205_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpdir CMakeFiles/cmTC_35784.dir/ -dumpbase CMakeCUDACompilerABI.cu.cpp -dumpbase-ext .cpp -m64 -mtune=generic -march=x86-64 -Wno-psabi -version -o /tmp/akcayhar/28364614/ccb9mJRo.s]
+        ignore line: [GNU C++17 (Spack GCC) version 13.2.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 8.5.0 20210514 (Red Hat 8.5.0-10)  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/include"]
+        ignore line: [ignoring duplicate directory "/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include]
+        ignore line: [ /appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/include]
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: a021b4756b74d78e25b2bf0dd1db674a]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-Wno-psabi' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_35784.dir/']
+        ignore line: [ /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as -v -I /appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o /tmp/akcayhar/28364614/ccb9mJRo.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.42]
+        ignore line: [COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-D' '__NV_LEGACY_LAUNCH' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-Wno-psabi' '-I' '/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.']
+        ignore line: [Linking CUDA executable cmTC_35784]
+        ignore line: [/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35784.dir/link.txt --verbose=1]
+        ignore line: [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++  -v CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o -o cmTC_35784  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs" -L"/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib"]
+        ignore line: [Reading specs from /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/specs]
+        ignore line: [COLLECT_GCC=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /local_scratch/build/spack-stage/ilvonens/spack-stage-gcc-13.2.0-hgaeyz2xb2bgd43nhoauikn5zmc5qn3c/spack-src/configure --prefix=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran,jit --disable-nls --disable-canonical-system-headers --with-system-zlib --with-zstd-include=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/include --with-zstd-lib=/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib --enable-host-shared --with-gnu-ld --with-ld=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld --with-gnu-as --with-as=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/as --disable-bootstrap --with-mpfr-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/include --with-mpfr-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib --with-gmp-include=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/include --with-gmp-lib=/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib --with-mpc-include=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/include --with-mpc-lib=/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib --without-isl --with-stage1-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64' --with-boot-ldflags='-Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gcc-runtime-8.5.0-tam75x/lib -Wl,-rpath,/usr/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/gmp-6.2.1-zwsfs5/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpc-1.3.1-yrm44x/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/mpfr-4.2.1-x5stp3/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zlib-ng-2.1.6-2cikda/lib -Wl,-rpath,/appl/spack/v022/install-tree/gcc-8.5.0/zstd-1.5.6-bch7ql/lib -Wl,-rpath,/usr/lib64 -static-libstdc++ -static-libgcc' --with-build-config=spack]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Spack GCC) ]
+        ignore line: [COMPILER_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64/:/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib/:/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs/:/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_35784' '-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs' '-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-B' '/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin' '-dumpdir' 'cmTC_35784.']
+        link line: [ /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/collect2 -plugin /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/liblto_plugin.so -plugin-opt=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/akcayhar/28364614/ccsuLKxW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_35784 /lib/../lib64/crt1.o /lib/../lib64/crti.o /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib -L/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib -L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64 -L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib -L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs -L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../.. -rpath /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64 CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/akcayhar/28364614/ccsuLKxW.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_35784] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o] ==> obj [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o]
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs]
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib]
+          arg [-L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64] ==> dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64]
+          arg [-L/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib] ==> dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib]
+          arg [-L/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs] ==> dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs]
+          arg [-L/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..] ==> dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..]
+          arg [-rpath] ==> ignore
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64] ==> ignore
+          arg [CMakeFiles/cmTC_35784.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o] ==> obj [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64/../lib64] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/../lib64] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib]
+        collapse library dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64] ==> [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64]
+        collapse library dir [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib] ==> [/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs] ==> [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs]
+        collapse library dir [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..] ==> [/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib/stubs;/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/targets/x86_64-linux/lib;/appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib64;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib/gcc/x86_64-pc-linux-gnu/13.2.0;/lib64;/usr/lib64;/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64;/appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/lib;/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/mkl/2022.1.0/lib/intel64;/appl/spack/v018/install-tree/gcc-8.5.0/intel-oneapi-mkl-2022.1.0-v37qbm/lib;/appl/spack/v022/install-tree/gcc-13.2.0/cuda-12.6.0-y4hqsn/lib64/stubs]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:1146 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-6gBU5E"
+      binary: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-6gBU5E"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "70"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-6gBU5E'
+        
+        Run Build Command(s): /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6efa4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6efa4.dir/build.make CMakeFiles/cmTC_6efa4.dir/build
+        gmake[1]: Entering directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-6gBU5E'
+        Building CXX object CMakeFiles/cmTC_6efa4.dir/src.cxx.o
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++20 -o CMakeFiles/cmTC_6efa4.dir/src.cxx.o -c /scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-6gBU5E/src.cxx
+        Linking CXX executable cmTC_6efa4
+        /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6efa4.dir/link.txt --verbose=1
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++ CMakeFiles/cmTC_6efa4.dir/src.cxx.o -o cmTC_6efa4 
+        /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld: CMakeFiles/cmTC_6efa4.dir/src.cxx.o: in function `main':
+        src.cxx:(.text+0x2d): undefined reference to `pthread_create'
+        /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld: src.cxx:(.text+0x39): undefined reference to `pthread_detach'
+        /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld: src.cxx:(.text+0x45): undefined reference to `pthread_cancel'
+        /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld: src.cxx:(.text+0x56): undefined reference to `pthread_join'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_6efa4.dir/build.make:99: cmTC_6efa4] Error 1
+        gmake[1]: Leaving directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-6gBU5E'
+        gmake: *** [Makefile:127: cmTC_6efa4/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:1146 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-KbLrEk"
+      binary: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-KbLrEk"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "70"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-KbLrEk'
+        
+        Run Build Command(s): /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a6ee8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a6ee8.dir/build.make CMakeFiles/cmTC_a6ee8.dir/build
+        gmake[1]: Entering directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-KbLrEk'
+        Building CXX object CMakeFiles/cmTC_a6ee8.dir/CheckFunctionExists.cxx.o
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu++20 -o CMakeFiles/cmTC_a6ee8.dir/CheckFunctionExists.cxx.o -c /scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-KbLrEk/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_a6ee8
+        /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6ee8.dir/link.txt --verbose=1
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_a6ee8.dir/CheckFunctionExists.cxx.o -o cmTC_a6ee8  -lpthreads 
+        /appl/spack/v022/install-tree/gcc-8.5.0/binutils-2.42-waaqjy/bin/ld: cannot find -lpthreads: No such file or directory
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_a6ee8.dir/build.make:99: cmTC_a6ee8] Error 1
+        gmake[1]: Leaving directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-KbLrEk'
+        gmake: *** [Makefile:127: cmTC_a6ee8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "/appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:1146 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-1Pq2DM"
+      binary: "/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-1Pq2DM"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "70"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-1Pq2DM'
+        
+        Run Build Command(s): /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_85bfc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_85bfc.dir/build.make CMakeFiles/cmTC_85bfc.dir/build
+        gmake[1]: Entering directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-1Pq2DM'
+        Building CXX object CMakeFiles/cmTC_85bfc.dir/CheckFunctionExists.cxx.o
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu++20 -o CMakeFiles/cmTC_85bfc.dir/CheckFunctionExists.cxx.o -c /scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-1Pq2DM/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_85bfc
+        /appl/spack/v022/install-tree/gcc-13.2.0/cmake-3.28.6-z4rz2c/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85bfc.dir/link.txt --verbose=1
+        /appl/spack/v022/install-tree/gcc-8.5.0/gcc-13.2.0-hgaeyz/bin/g++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_85bfc.dir/CheckFunctionExists.cxx.o -o cmTC_85bfc  -lpthread 
+        gmake[1]: Leaving directory '/scratch/project_2011942/p/build/CMakeFiles/CMakeScratch/TryCompile-1Pq2DM'
+        
+      exitCode: 0
+...
