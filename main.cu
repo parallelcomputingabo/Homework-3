@@ -23,7 +23,53 @@ __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint
 }
 
 __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p, uint32_t tile_width) {
-    // TODO: Implement tiled CUDA matrix multiplication
+    // Shared memory for tiles
+    extern __shared__ float shared_mem[];
+    float* tile_A = shared_mem;
+    float* tile_B = &shared_mem[tile_width * tile_width];
+    
+    // Thread indices
+    uint32_t tx = threadIdx.x;
+    uint32_t ty = threadIdx.y;
+    uint32_t row = blockIdx.y * tile_width + ty;
+    uint32_t col = blockIdx.x * tile_width + tx;
+    
+    float sum = 0.0f;
+    
+    // Loop over tiles
+    for (uint32_t tile = 0; tile < (n + tile_width - 1) / tile_width; ++tile) {
+        // Load tile of A into shared memory
+        uint32_t a_col = tile * tile_width + tx;
+        if (row < m && a_col < n) {
+            tile_A[ty * tile_width + tx] = A[row * n + a_col];
+        } else {
+            tile_A[ty * tile_width + tx] = 0.0f;
+        }
+        
+        // Load tile of B into shared memory
+        uint32_t b_row = tile * tile_width + ty;
+        if (b_row < n && col < p) {
+            tile_B[ty * tile_width + tx] = B[b_row * p + col];
+        } else {
+            tile_B[ty * tile_width + tx] = 0.0f;
+        }
+        
+        // Synchronize to ensure all data is loaded
+        __syncthreads();
+        
+        // Compute partial dot product
+        for (uint32_t k = 0; k < tile_width; ++k) {
+            sum += tile_A[ty * tile_width + k] * tile_B[k * tile_width + tx];
+        }
+        
+        // Synchronize before loading next tile
+        __syncthreads();
+    }
+    
+    // Write result
+    if (row < m && col < p) {
+        C[row * p + col] = sum;
+    }
 }
 
 bool validate_result(const std::string &result_file, const std::string &reference_file) {
