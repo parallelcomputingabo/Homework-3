@@ -41,7 +41,8 @@ I have designed and executed my solution to run on Mahti-CSC.
 - **main.cu** has the code with error check implementation
 - **main_no_error_check.cu** has it without error check implementation.
 
--Naive results go in data/<case>/result.raw, and the tiled version is saved as data/<case>/result_tiled.raw.
+-**Naive results go in data/<case>/result.raw, and the tiled version is saved as data/<case>/result_tiled.raw.**
+- **Time execution output for each round goes to naive_gpu.out**
 
 
 ## Interpretation
@@ -111,7 +112,7 @@ Loads the CUDA 11.5 module, navigates to the project directory, then iterates ov
 
 The SLURM script passes data/$i/result.raw as the output filename only for the naive kernel, then internally it always writes the tiled output to data/$i/result_tiled.raw without needing a second argument.
 
-Output (stdout/stderr) goes to naive_gpu.out
+Timing output (stdout/stderr) goes to naive_gpu.out
 
 
 
