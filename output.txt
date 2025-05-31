@@ -1,0 +1,60 @@
+------------------------------
+Case 0 (64x64x64):
+Data transfer (from host to device and device to host): 0.08 seconds
+Naive CUDA time: 0.07 seconds
+Tiled CUDA time: 0.055 seconds
+------------------------------
+------------------------------
+Case 1 (128x64x128):
+Data transfer (from host to device and device to host): 0.111 seconds
+Naive CUDA time: 0.069 seconds
+Tiled CUDA time: 0.09 seconds
+------------------------------
+------------------------------
+Case 2 (100x128x56):
+Data transfer (from host to device and device to host): 0.083 seconds
+Naive CUDA time: 0.067 seconds
+Tiled CUDA time: 0.089 seconds
+------------------------------
+------------------------------
+Case 3 (128x64x128):
+Data transfer (from host to device and device to host): 0.102 seconds
+Naive CUDA time: 0.065 seconds
+Tiled CUDA time: 0.091 seconds
+------------------------------
+------------------------------
+Case 4 (32x128x32):
+Data transfer (from host to device and device to host): 0.059 seconds
+Naive CUDA time: 0.066 seconds
+Tiled CUDA time: 0.054 seconds
+------------------------------
+------------------------------
+Case 5 (200x100x256):
+Data transfer (from host to device and device to host): 0.209 seconds
+Naive CUDA time: 0.07 seconds
+Tiled CUDA time: 0.264 seconds
+------------------------------
+------------------------------
+Case 6 (256x256x256):
+Data transfer (from host to device and device to host): 0.294 seconds
+Naive CUDA time: 0.091 seconds
+Tiled CUDA time: 0.586 seconds
+------------------------------
+------------------------------
+Case 7 (256x300x256):
+Data transfer (from host to device and device to host): 0.292 seconds
+Naive CUDA time: 0.094 seconds
+Tiled CUDA time: 0.69 seconds
+------------------------------
+------------------------------
+Case 8 (64x128x64):
+Data transfer (from host to device and device to host): 0.075 seconds
+Naive CUDA time: 0.066 seconds
+Tiled CUDA time: 0.089 seconds
+------------------------------
+------------------------------
+Case 9 (256x256x257):
+Data transfer (from host to device and device to host): 0.28 seconds
+Naive CUDA time: 0.089 seconds
+Tiled CUDA time: 0.625 seconds
+------------------------------
