@@ -1,0 +1,3 @@
+/users/ishaqmem/cuda-matmul/build/CMakeFiles/app.dir
+/users/ishaqmem/cuda-matmul/build/CMakeFiles/edit_cache.dir
+/users/ishaqmem/cuda-matmul/build/CMakeFiles/rebuild_cache.dir
