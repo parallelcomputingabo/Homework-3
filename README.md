@@ -39,7 +39,7 @@ I have designed and executed my solution to run on Mahti-CSC.
 -For the tiled matrix, I have used TILE_WIDTH of 16, I tried 32 but 16 was slightly faster in most of cases (I think because we have relatively small matrices). 
 
 - **main.cu** has the code with error check implementation
-- **main_no_error_check.cu** has it without.
+- **main_no_error_check.cu** has it without error check implementation.
 
 -Naive results go in data/<case>/result.raw, and the tiled version is saved as data/<case>/result_tiled.raw.
 
