@@ -1,0 +1,60 @@
+running testcase 0
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 0 (64x64x64):
+Naive CUDA time: 5.4272e-05 seconds
+Tiled CUDA time: 2.2592e-05 seconds
+running testcase 1
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 1 (128x64x128):
+Naive CUDA time: 5.4272e-05 seconds
+Tiled CUDA time: 2.368e-05 seconds
+running testcase 2
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 2 (100x128x56):
+Naive CUDA time: 6.0416e-05 seconds
+Tiled CUDA time: 2.736e-05 seconds
+running testcase 3
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 3 (128x64x128):
+Naive CUDA time: 5.3248e-05 seconds
+Tiled CUDA time: 2.4032e-05 seconds
+running testcase 4
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 4 (32x128x32):
+Naive CUDA time: 6.144e-05 seconds
+Tiled CUDA time: 2.6048e-05 seconds
+running testcase 5
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 5 (200x100x256):
+Naive CUDA time: 5.9296e-05 seconds
+Tiled CUDA time: 2.6144e-05 seconds
+running testcase 6
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 6 (256x256x256):
+Naive CUDA time: 7.5072e-05 seconds
+Tiled CUDA time: 3.7824e-05 seconds
+running testcase 7
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 7 (256x300x256):
+Naive CUDA time: 8.0096e-05 seconds
+Tiled CUDA time: 4.9792e-05 seconds
+running testcase 8
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 8 (64x128x64):
+Naive CUDA time: 5.9392e-05 seconds
+Tiled CUDA time: 2.6208e-05 seconds
+running testcase 9
+Matrix is same, validation complete
+Matrix is same, validation complete
+Case 9 (256x256x257):
+Naive CUDA time: 7.6864e-05 seconds
+Tiled CUDA time: 3.7664e-05 seconds
