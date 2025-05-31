@@ -163,7 +163,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Construct file paths
-    std::string folder = "../data/" + std::to_string(case_number) + "/";
+    std::string folder = "./data/" + std::to_string(case_number) + "/";
     std::string input0_file = folder + "input0.raw";
     std::string input1_file = folder + "input1.raw";
     std::string result_naive_file = folder + "result_naive_cuda.raw";
