@@ -11,18 +11,6 @@
 #include <vector>
 #include <string>
 
-//-------------------------------------------------------------------------------------------------
-// Macro to check CUDA errors
-#define CUDA_CHECK(call)                                                    \
-    do {                                                                    \
-        cudaError_t err = call;                                             \
-        if (err != cudaSuccess) {                                           \
-            fprintf(stderr, "CUDA error at %s:%d: %s\n", __FILE__, __LINE__, \
-                    cudaGetErrorString(err));                               \
-            exit(EXIT_FAILURE);                                             \
-        }                                                                   \
-    } while (0)
-
 
 //-------------------------------------------------------------------------------------------------
 // CUDA kernel for naive matrix multiplication: each thread computes one output element C[row, col]
@@ -198,8 +186,8 @@ int main(int argc, char **argv) {
 
     // Create CUDA events for total timing (H2D + kernel + D2H) for naive version
     cudaEvent_t totalStart, totalStop;
-    CUDA_CHECK(cudaEventCreate(&totalStart));
-    CUDA_CHECK(cudaEventCreate(&totalStop));
+    cudaEventCreate(&totalStart);
+    cudaEventCreate(&totalStop);
 
     const char *fileA = argv[1];
     const char *fileB = argv[2];
@@ -224,16 +212,16 @@ int main(int argc, char **argv) {
 
     // Allocate device memory for A, B, C (naive)
     float *d_A, *d_B, *d_C;
-    CUDA_CHECK(cudaMalloc(&d_A, size_A * sizeof(float)));
-    CUDA_CHECK(cudaMalloc(&d_B, size_B * sizeof(float)));
-    CUDA_CHECK(cudaMalloc(&d_C, size_C * sizeof(float)));
+    cudaMalloc(&d_A, size_A * sizeof(float));
+    cudaMalloc(&d_B, size_B * sizeof(float));
+    cudaMalloc(&d_C, size_C * sizeof(float));
 
     // Start total timer for naive (include H2D)
-    CUDA_CHECK(cudaEventRecord(totalStart));
+    cudaEventRecord(totalStart);
 
     // Copy inputs to GPU
-    CUDA_CHECK(cudaMemcpy(d_A, h_A, size_A * sizeof(float), cudaMemcpyHostToDevice));
-    CUDA_CHECK(cudaMemcpy(d_B, h_B, size_B * sizeof(float), cudaMemcpyHostToDevice));
+    cudaMemcpy(d_A, h_A, size_A * sizeof(float), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_B, h_B, size_B * sizeof(float), cudaMemcpyHostToDevice);
 
     // Launch configuration for naive
     dim3 blockDim(16, 16);
@@ -242,27 +230,27 @@ int main(int argc, char **argv) {
 
     // Create events and measure kernel-only time for naive
     cudaEvent_t start, stop;
-    CUDA_CHECK(cudaEventCreate(&start));
-    CUDA_CHECK(cudaEventCreate(&stop));
-    CUDA_CHECK(cudaEventRecord(start));
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+    cudaEventRecord(start);
 
     naive_cuda_matmul<<<gridDim, blockDim>>>(d_C, d_A, d_B, m, n, p);
-    CUDA_CHECK(cudaGetLastError());
-    CUDA_CHECK(cudaDeviceSynchronize());
+    cudaDeviceSynchronize();
 
-    CUDA_CHECK(cudaEventRecord(stop));
-    CUDA_CHECK(cudaEventSynchronize(stop));
+    cudaEventRecord(stop);
+    cudaEventSynchronize(stop);
+
     float ms = 0;
-    CUDA_CHECK(cudaEventElapsedTime(&ms, start, stop));
+    cudaEventElapsedTime(&ms, start, stop);
     printf("Naive CUDA time (kernel execution only): %.4f ms\n", ms);
 
     // Copy result back and stop total timer
-    CUDA_CHECK(cudaMemcpy(h_C, d_C, size_C * sizeof(float), cudaMemcpyDeviceToHost));
-    CUDA_CHECK(cudaEventRecord(totalStop));
-    CUDA_CHECK(cudaEventSynchronize(totalStop));
+    cudaMemcpy(h_C, d_C, size_C * sizeof(float), cudaMemcpyDeviceToHost);
+    cudaEventRecord(totalStop);
+    cudaEventSynchronize(totalStop);
 
     float totalMs = 0;
-    CUDA_CHECK(cudaEventElapsedTime(&totalMs, totalStart, totalStop));
+    cudaEventElapsedTime(&totalMs, totalStart, totalStop);
     printf("Total CUDA time (with transfers): %.4f ms\n", totalMs);
 
     // Save naive result and validate
@@ -270,6 +258,7 @@ int main(int argc, char **argv) {
     std::string ref_path = std::string(fileC).substr(0, std::string(fileC).find_last_of("/\\") + 1) + "output.raw";
     bool ok = compare_matrix_files(fileC, ref_path);
     printf("%s\n", ok ? "CUDA RESULT PASS" : "CUDA RESULT FAIL");
+
 
     //-------------------------------------------------------------------------------------------------
     // Tiled CUDA Matrix Multiplication
@@ -281,45 +270,45 @@ int main(int argc, char **argv) {
 
     // Allocate device and host memory for tiled result
     float *d_C_tiled;
-    CUDA_CHECK(cudaMalloc(&d_C_tiled, size_C * sizeof(float)));
+    cudaMalloc(&d_C_tiled, size_C * sizeof(float));
     float *h_C_tiled = (float*)malloc(size_C * sizeof(float));
 
     // Create CUDA events for total timing (H2D + kernel + D2H) for tiled
     cudaEvent_t tiledTotalStart, tiledTotalStop;
-    CUDA_CHECK(cudaEventCreate(&tiledTotalStart));
-    CUDA_CHECK(cudaEventCreate(&tiledTotalStop));
+    cudaEventCreate(&tiledTotalStart);
+    cudaEventCreate(&tiledTotalStop);
 
     // Start total timer for tiled
-    CUDA_CHECK(cudaEventRecord(tiledTotalStart));
+    cudaEventRecord(tiledTotalStart);
 
     // Re-upload inputs to include H2D in tiled total timing
-    CUDA_CHECK(cudaMemcpy(d_A, h_A, size_A * sizeof(float), cudaMemcpyHostToDevice));
-    CUDA_CHECK(cudaMemcpy(d_B, h_B, size_B * sizeof(float), cudaMemcpyHostToDevice));
+    cudaMemcpy(d_A, h_A, size_A * sizeof(float), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_B, h_B, size_B * sizeof(float), cudaMemcpyHostToDevice);
 
     // Create events and measure kernel-only time for tiled
     cudaEvent_t tileStart, tileStop;
-    CUDA_CHECK(cudaEventCreate(&tileStart));
-    CUDA_CHECK(cudaEventCreate(&tileStop));
-    CUDA_CHECK(cudaEventRecord(tileStart));
+    cudaEventCreate(&tileStart);
+    cudaEventCreate(&tileStop);
+    cudaEventRecord(tileStart);
 
     tiled_cuda_matmul<<<tiledGridDim, tiledBlockDim, 2 * TILE_WIDTH * TILE_WIDTH * sizeof(float)>>>(
         d_C_tiled, d_A, d_B, m, n, p, TILE_WIDTH);
-    CUDA_CHECK(cudaGetLastError());
-    CUDA_CHECK(cudaDeviceSynchronize());
+    cudaDeviceSynchronize();
 
-    CUDA_CHECK(cudaEventRecord(tileStop));
-    CUDA_CHECK(cudaEventSynchronize(tileStop));
+    cudaEventRecord(tileStop);
+    cudaEventSynchronize(tileStop);
 
     float tiledMs = 0;
-    CUDA_CHECK(cudaEventElapsedTime(&tiledMs, tileStart, tileStop));
+    cudaEventElapsedTime(&tiledMs, tileStart, tileStop);
     printf("Tiled CUDA kernel time: %.4f ms\n", tiledMs);
 
     // Copy tiled result back and stop total timer
-    CUDA_CHECK(cudaMemcpy(h_C_tiled, d_C_tiled, size_C * sizeof(float), cudaMemcpyDeviceToHost));
-    CUDA_CHECK(cudaEventRecord(tiledTotalStop));
-    CUDA_CHECK(cudaEventSynchronize(tiledTotalStop));
+    cudaMemcpy(h_C_tiled, d_C_tiled, size_C * sizeof(float), cudaMemcpyDeviceToHost);
+    cudaEventRecord(tiledTotalStop);
+    cudaEventSynchronize(tiledTotalStop);
+
     float tiledTotalMs = 0;
-    CUDA_CHECK(cudaEventElapsedTime(&tiledTotalMs, tiledTotalStart, tiledTotalStop));
+    cudaEventElapsedTime(&tiledTotalMs, tiledTotalStart, tiledTotalStop);
     printf("Tiled CUDA total time (with transfers): %.4f ms\n", tiledTotalMs);
 
     // Save tiled result and validate
@@ -331,13 +320,13 @@ int main(int argc, char **argv) {
     printf("%s\n", ok_tiled ? "TILED RESULT PASS" : "TILED RESULT FAIL");
 
     // Free tiled resources
-    CUDA_CHECK(cudaFree(d_C_tiled));
+    cudaFree(d_C_tiled);
     free(h_C_tiled);
 
     // Free naive resources
-    CUDA_CHECK(cudaFree(d_A));
-    CUDA_CHECK(cudaFree(d_B));
-    CUDA_CHECK(cudaFree(d_C));
+    cudaFree(d_A);
+    cudaFree(d_B);
+    cudaFree(d_C);
     free(h_A);
     free(h_B);
     free(h_C);

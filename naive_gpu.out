@@ -1,0 +1,70 @@
+Running case 0
+Naive CUDA time (kernel execution only): 0.0522 ms
+Total CUDA time (with transfers): 0.1391 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0174 ms
+Tiled CUDA total time (with transfers): 0.0813 ms
+TILED RESULT PASS
+Running case 1
+Naive CUDA time (kernel execution only): 0.0563 ms
+Total CUDA time (with transfers): 0.1677 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0174 ms
+Tiled CUDA total time (with transfers): 0.1021 ms
+TILED RESULT PASS
+Running case 2
+Naive CUDA time (kernel execution only): 0.0553 ms
+Total CUDA time (with transfers): 0.1503 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0215 ms
+Tiled CUDA total time (with transfers): 0.0925 ms
+TILED RESULT PASS
+Running case 3
+Naive CUDA time (kernel execution only): 0.0502 ms
+Total CUDA time (with transfers): 0.1640 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0174 ms
+Tiled CUDA total time (with transfers): 0.1051 ms
+TILED RESULT PASS
+Running case 4
+Naive CUDA time (kernel execution only): 0.0573 ms
+Total CUDA time (with transfers): 0.1388 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0205 ms
+Tiled CUDA total time (with transfers): 0.0739 ms
+TILED RESULT PASS
+Running case 5
+Naive CUDA time (kernel execution only): 0.0522 ms
+Total CUDA time (with transfers): 0.2367 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0288 ms
+Tiled CUDA total time (with transfers): 0.1835 ms
+TILED RESULT PASS
+Running case 6
+Naive CUDA time (kernel execution only): 0.0584 ms
+Total CUDA time (with transfers): 0.3051 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0386 ms
+Tiled CUDA total time (with transfers): 0.2446 ms
+TILED RESULT PASS
+Running case 7
+Naive CUDA time (kernel execution only): 0.0636 ms
+Total CUDA time (with transfers): 0.3161 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0399 ms
+Tiled CUDA total time (with transfers): 0.2526 ms
+TILED RESULT PASS
+Running case 8
+Naive CUDA time (kernel execution only): 0.0563 ms
+Total CUDA time (with transfers): 0.1472 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0205 ms
+Tiled CUDA total time (with transfers): 0.0869 ms
+TILED RESULT PASS
+Running case 9
+Naive CUDA time (kernel execution only): 0.0589 ms
+Total CUDA time (with transfers): 0.3029 ms
+CUDA RESULT PASS
+Tiled CUDA kernel time: 0.0368 ms
+Tiled CUDA total time (with transfers): 0.2476 ms
+TILED RESULT PASS
