@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cuda_runtime.h>
+#include <cstdint>
 
 __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p) {
     // TODO: Implement naive CUDA matrix multiplication
