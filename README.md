@@ -83,7 +83,7 @@ for i in {0..9}; do
     echo "Running case $i"
     srun ./app data/$i/input0.raw data/$i/input1.raw data/$i/result.raw
 done
-
+```
 Brief:
 
 Requests a single A100 GPU, 4 CPU cores, and 2 GB RAM per core for up to 30 minutes.
