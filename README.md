@@ -1,207 +1,130 @@
-**Parallel Programming**  
-**Åbo Akademi University, Information Technology Department**  
-**Instructor: Alireza Olama**
+This file contains the results and details of my work.
 
-**Homework Assignment 3: Matrix Multiplication with CUDA**
+I have designed and executed my solution to run on Mahti super computer within the same project of the workshop.
 
-**Due Date**: **31/05/2025**  
-**Points**: 100
 
----
+## Performance Results (Including Transfers)
 
-### Assignment Overview
+1st table is for averaged results without error check overhead (3 runs) comparing GPU implementations (with transfer times) against Assignment 2 CPU results.
 
-Welcome to the third homework assignment of the Parallel Programming course!
-In Assignment 2, you optimized matrix multiplication using cache-friendly blocked multiplication and OpenMP for CPU
-parallelism. In this assignment, you will take matrix multiplication to the GPU using **CUDA**, NVIDIA’s parallel
-computing platform. Your task is to implement matrix multiplication on the GPU, optimize it using CUDA-specific
-techniques, and compare its performance with your CPU-based implementations from Assignment 2.
+| Test Case | Dimensions (m × n × p) | Naive CPU (s) | Blocked CPU (s) | Parallel CPU (s) | Naive CUDA (s) | Tiled CUDA (s) | Speedup (Tiled vs Naive CUDA) | Speedup (Tiled vs Parallel CPU) |
+|-----------|------------------------|---------------|-----------------|------------------|----------------|----------------|-------------------------------|---------------------------------|
+| 0         | 64 × 64 × 64           | 0.001784      | 0.001480        | 0.000437         | 0.0001235      | 0.0000768      | 1.61                          | 5.69                            |
+| 1         | 128 × 64 × 128         | 0.003957      | 0.003650        | 0.000848         | 0.0001453      | 0.0000971      | 1.50                          | 8.73                            |
+| 2         | 100 × 128 × 56         | 0.002369      | 0.002266        | 0.000575         | 0.0001369      | 0.0000875      | 1.56                          | 6.57                            |
+| 3         | 128 × 64 × 128         | 0.003344      | 0.003310        | 0.000824         | 0.0001451      | 0.0000973      | 1.49                          | 8.47                            |
+| 4         | 32 × 128 × 32          | 0.000434      | 0.000423        | 0.000243         | 0.0001242      | 0.0000763      | 1.63                          | 3.19                            |
+| 5         | 200 × 100 × 256        | 0.017642      | 0.015881        | 0.003823         | 0.0002086      | 0.0001674      | 1.25                          | 22.84                           |
+| 6         | 256 × 256 × 256        | 0.056921      | 0.053781        | 0.011920         | 0.0002672      | 0.0002242      | 1.19                          | 53.18                           |
+| 7         | 256 × 300 × 256        | 0.066703      | 0.064336        | 0.013929         | 0.0002805      | 0.0002473      | 1.13                          | 56.33                           |
+| 8         | 64 × 128 × 64          | 0.001738      | 0.001612        | 0.000505         | 0.0001313      | 0.0000856      | 1.53                          | 5.90                            |
+| 9         | 256 × 256 × 257        | 0.056782      | 0.053043        | 0.010905         | 0.0002697      | 0.0002334      | 1.16                          | 46.73                           |
 
-You will implement:
+2nd table is for averaged results with error check overhead implemented (3 runs) comparing GPU implementations (with transfer times) against Assignment 2 CPU results.
 
-1. **Naive CUDA Matrix Multiplication**: A basic GPU implementation using CUDA kernels.
-2. **Tiled CUDA Matrix Multiplication**: An optimized version using shared memory to improve memory access patterns.
-3. **Performance Comparison**: Measure and compare the performance of both CUDA implementations against your Assignment
-   2 implementations (naive, blocked, and parallel).
+| Case | Size            | Naive CPU (s) | Blocked CPU (s) | Parallel CPU (s) | Naive CUDA (s) | Tiled CUDA (s) | Speedup (vs Naive CUDA) | Speedup (vs Parallel CPU) |
+|:----:|:----------------|--------------:|----------------:|-----------------:|---------------:|---------------:|------------------------:|--------------------------:|
+| 0   | 64×64×64        | 0.001784      | 0.001480       | 0.000437        | 0.000165       | 0.000081       | 2.02×                   | 5.37×                     |
+| 1   | 128×64×128      | 0.003957      | 0.003650       | 0.000848        | 0.000198       | 0.000113       | 1.76×                   | 7.52×                     |
+| 2   | 100×128×56      | 0.002369      | 0.002266       | 0.000575        | 0.000187       | 0.000091       | 2.05×                   | 6.32×                     |
+| 3   | 128×64×128      | 0.003344      | 0.003310       | 0.000824        | 0.000198       | 0.000117       | 1.69×                   | 7.05×                     |
+| 4   | 32×128×32       | 0.000434      | 0.000423       | 0.000243        | 0.000162       | 0.000075       | 2.16×                   | 3.24×                     |
+| 5   | 200×100×256     | 0.017642      | 0.015881       | 0.003823        | 0.000284       | 0.000211       | 1.35×                   | 18.12×                    |
+| 6   | 256×256×256     | 0.056921      | 0.053781       | 0.011920        | 0.000355       | 0.000277       | 1.28×                   | 42.95×                    |
+| 7   | 256×300×256     | 0.066703      | 0.064336       | 0.013929        | 0.000371       | 0.000283       | 1.31×                   | 49.22×                    |
+| 8   | 64×128×64       | 0.001738      | 0.001612       | 0.000505        | 0.000175       | 0.000090       | 1.95×                   | 5.61×                     |
+| 9   | 256×256×257     | 0.056782      | 0.053043       | 0.010905        | 0.000360       | 0.000279       | 1.29×                   | 39.14×                    |
 
-This assignment introduces CUDA programming, including kernel launches, thread grids, blocks, and memory management,
-while reinforcing the importance of data locality and parallelism.
 
----
+Note that I got those readings before I add the error-checking code to make my readings consistent with assignment2's, but then I added the debugging/error checking lines. 
 
-### Technical Requirements
+For the tiled matrix, I have used TILE_WIDTH of 16, I tried 32 but 16 was slightly faster in most of cases (I think because we have relatively small matrices). 
 
-#### 1. Naive CUDA Matrix Multiplication
 
-**Why CUDA?**
+Naive results go in data/<case>/result.raw, and the tiled version is saved as data/<case>/result_tiled.raw. Neither overwrites the original output.raw.
 
-CUDA allows you to execute parallel computations on NVIDIA GPUs, which have thousands of cores designed for
-data-parallel tasks. Matrix multiplication is an ideal workload for GPUs because it involves independent computations
-for each element of the output matrix.
+## Dependencies: 
+- CUDA Toolkit ≥ 11.5.0
+- NVIDIA A100 or compatible GPU
+- CSC's host C++ compiler with its default standard
 
-In the naive CUDA implementation, each thread computes one element of the output matrix \( C \). The GPU organizes
-threads into a grid of thread blocks, where each block contains a group of threads (e.g., 16x16 threads).
-
-**Naive CUDA Matrix Multiplication**
-
-Assume matrices \( A \) \( m x n \), \( B \) \( n x p \), and \( C \) \( m x p \) are stored in
-row-major order in GPU global memory:
-
-```c
-__global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p) {
-    
-}
-```
-
-- **Grid and Block Configuration**: Launch a 2D grid of 2D thread blocks (e.g., 16x16 threads per block).
-- **Memory**: Matrices are stored in GPU global memory. Use `cudaMalloc` and `cudaMemcpy` to allocate and transfer data
-  between host (CPU) and device (GPU).
-- **Task**: Implement the `naive_cuda_matmul` kernel and its host code in the provided `main.cu`. Measure the wall clock
-  time, including data transfer times (host-to-device and device-to-host).
-
-#### 2. Tiled CUDA Matrix Multiplication
-
-**Why Tiling?**
-
-The naive CUDA implementation accesses global memory frequently, which is slow (hundreds of cycles per access). CUDA
-GPUs have **shared memory**, a fast, on-chip memory shared by threads in a block. Tiled matrix multiplication divides
-matrices into tiles (submatrices) that fit into shared memory, reducing global memory accesses and improving
-performance.
-
-**Tiled CUDA Matrix Multiplication**
-
-Assume a tile size of `TILE_WIDTH` (e.g., 16 or 32):
-
-```c
-__global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p, uint32_t tile_width) {
-
-}
-```
-
-- **Shared Memory**: Each block loads tiles of \( A \) and \( B \) into shared memory, computes partial results, and
-  accumulates the sum.
-- **Synchronization**: Use `__syncthreads()` to ensure all threads in a block have loaded data before computation.
-- **Task**: Implement the `tiled_cuda_matmul` kernel and its host code in `main.cu`. Experiment with different tile
-  sizes (e.g., 16, 32) and report the best performance.
-
-#### 3. Performance Measurement
-
-For each test case (0 through 9, using the same `data` folder from Assignment 2):
-
-- Measure the wall clock time for:
-    - **Naive CUDA matrix multiplication** (`naive_cuda_matmul`), including data transfer times.
-    - **Tiled CUDA matrix multiplication** (`tiled_cuda_matmul`), including data transfer times.
-- Compare with Assignment 2 results (naive, blocked, and parallel CPU implementations).
-- Use `cudaEventRecord` and `cudaEventElapsedTime` for accurate GPU timing.
-- Report the times in a table in your `README.md`, including:
-    - Test case number.
-    - Matrix dimensions (\( m \times n \times p \)).
-    - Wall clock time for naive CUDA, tiled CUDA, and Assignment 2 implementations (in seconds).
-    - Speedup of tiled CUDA over naive CUDA and over Assignment 2’s parallel implementation.
-
-**Example Table Format**:
-
-| Test Case | Dimensions (\( m \times n \times p \)) | Naive CPU (s) | Blocked CPU (s) | Parallel CPU (s) | Naive CUDA (s) | Tiled CUDA (s) | Tiled CUDA Speedup (vs. Naive CUDA) | Tiled CUDA Speedup (vs. Parallel CPU) |
-|-----------|----------------------------------------|---------------|-----------------|------------------|----------------|----------------|-------------------------------------|---------------------------------------|
-|         |                         |      |           |             |          |          |                               |                                 |
-
----
-
-### Matrix Storage and Memory Management
-
-- Continue using row-major order for matrices.
-- Use CUDA memory management (`cudaMalloc`, `cudaMemcpy`, `cudaFree`) for GPU data.
-- Reuse the same input/output format as Assignment 2:
-    - Input files: `data/<case>/input0.raw` (matrix \( A \)) and `input1.raw` (matrix \( B \)).
-    - Output file: `data/<case>/result.raw` (matrix \( C \)).
-    - Reference file: `data/<case>/output.raw` for validation.
-
----
-
-### Build Instructions
-
-- Use the provided `CMakeLists.txt`, which includes CUDA support.
-- **Requirements**:
-    - NVIDIA GPU with CUDA support.
-    - CUDA Toolkit installed (version 11.x or later recommended).
-    - CMake with CUDA language support.
-- **Linux/Mac**:
-    - Run `cmake -DCMAKE_CUDA_COMPILER=nvcc .` to generate a Makefile, then `make`.
-- **Windows**:
-    - Use Visual Studio with CUDA toolkit or MinGW with `cmake -G "MinGW Makefiles"`.
-- Test with the same test cases (0–9) as Assignment 2.
-
----
-
-### Submission Requirements
-
-#### Fork and Clone the Repository
-
-- Fork the Assignment 3 repository (provided separately).
-- Clone your fork:
-  ```bash
-  git clone https://github.com/parallelcomputingabo/Homework-3.git
-  cd Homework-3
-  ```
-
-#### Create a New Branch
+## Build Instructions:
+Refer to the "run_naive.sh" file.
 
 ```bash
-git checkout -b student-name
-```
+# Navigate to the project folder
+cd ~/Homework-3-main
 
-#### Implement Your Solution
+# Using nvcc directly:
+module load cuda/11.5.0
+nvcc -O3 -o app main.cu
+sbatch run_naive.sh 
 
-- Modify the provided `main.cu` to implement `naive_cuda_matmul` and `tiled_cuda_matmul`.
-- Update `README.md` with your performance results table.
 
-#### Commit and Push
 
+### SLURM Job Script (`run_naive_gpu.sh`)
 ```bash
-git add .
-git commit -m "student-name: Implemented CUDA matrix multiplication"
-git push origin student-name
-```
+#!/bin/bash
+#SBATCH --job-name=naive_gpu
+#SBATCH --account=project_2014289
+#SBATCH --partition=gpusmall
+#SBATCH --time=00:30:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=2G
+#SBATCH --gres=gpu:a100:1
+#SBATCH --output=naive_gpu.out
 
-#### Submit a Pull Request (PR)
+module load cuda/11.5.0
 
-- Create a pull request from your branch to the base repository’s `main` branch.
-- Include a description of your CUDA optimizations and any challenges faced.
+cd ~/Homework-3-main
 
----
+for i in {0..9}; do
+    echo "Running case $i"
+    srun ./app data/$i/input0.raw data/$i/input1.raw data/$i/result.raw
+done
 
-### Grading (100 Points Total)
+Brief:
 
-| Subtask                                       | Points  |
-|-----------------------------------------------|---------|
-| Correct implementation of `naive_cuda_matmul` | 30      |
-| Correct implementation of `tiled_cuda_matmul` | 30      |
-| Accurate performance measurements             | 20      |
-| Performance results table in `README.md`      | 10      |
-| Code clarity, commenting, and organization    | 10      |
-| **Total**                                     | **100** |
+Requests a single A100 GPU, 4 CPU cores, and 2 GB RAM per core for up to 30 minutes.
 
----
+Loads the CUDA 11.5 module, navigates to the project directory, then iterates over test cases 0–9.
 
-### Tips for Success
+The SLURM script passes data/$i/result.raw as the output filename only for the naive kernel, then internally it always writes the tiled output to data/$i/result_tiled.raw without needing a second argument.
 
-- **Naive CUDA**:
-    - Ensure correct grid and block dimensions (e.g., `dim3 threadsPerBlock(16, 16)`).
-    - Check for CUDA errors using `cudaGetLastError` and `cudaDeviceSynchronize`.
-- **Tiled CUDA**:
-    - Experiment with tile sizes (e.g., 16, 32) to balance shared memory usage and thread divergence.
-    - Minimize shared memory bank conflicts by ensuring contiguous thread access.
-- **Performance**:
-    - Include data transfer times in measurements, as they are significant for GPU workloads.
-    - Run multiple iterations per test case to reduce timing variability.
-- **Debugging**:
-    - Validate CUDA results against `output.raw` to ensure correctness.
-    - Use small matrices for initial testing (e.g., 64x64).
-    - Check CUDA documentation for memory management and kernel launch syntax.
-
----
+Output (stdout/stderr) goes to naive_gpu.out.
 
 
 
-Good luck, and enjoy accelerating matrix multiplication with CUDA!
+## Time calculation: 
+“Time with transfers” is to record wall-clock from just before copying A & B Host→Device, through the kernel launch, until after you copy C Device→Host. 
+For the tiled matrix time calculation, I had to re-copy A & B from Host -> Device to give a fair comparison. 
+
+
+Parallelism: 
+Block dimensions: 16 × 16 threads
+
+Threads per block: 16 × 16 = 256
+
+Total threads:
+
+m and p be the output matrix’s row and column counts.
+
+Grid size = ⌈p/16⌉ blocks in X × ⌈m/16⌉ blocks in Y
+
+Total blocks = ⌈p/16⌉ × ⌈m/16⌉
+
+Total threads = (⌈p/16⌉ × ⌈m/16⌉) × 256
+
+For example, if m = 64 and p = 64:
+
+Grid = (⌈64/16⌉=4) × (⌈64/16⌉=4) = 4 × 4 blocks
+
+Total blocks = 16
+
+Total threads = 16 × 256 = 4096 threads.
+
+
+
+
 
