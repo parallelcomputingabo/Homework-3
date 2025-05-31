@@ -14,14 +14,14 @@
         } \
     } while(0)
 
-__global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p) {
+__global__ void naive_cuda_matmul(double *C, double *A, double *B, uint32_t m, uint32_t n, uint32_t p) {
     // Calculate thread indices
     uint32_t row = blockIdx.y * blockDim.y + threadIdx.y;
     uint32_t col = blockIdx.x * blockDim.x + threadIdx.x;
     
     // Check bounds
     if (row < m && col < p) {
-        float sum = 0.0f;
+        double sum = 0.0f;
         
         // Compute dot product for C[row][col]
         for (uint32_t k = 0; k < n; ++k) {
@@ -32,11 +32,11 @@ __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint
     }
 }
 
-__global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p, uint32_t tile_width) {
+__global__ void tiled_cuda_matmul(double *C, double *A, double *B, uint32_t m, uint32_t n, uint32_t p, uint32_t tile_width) {
     // Shared memory for tiles
-    extern __shared__ float shared_mem[];
-    float* tile_A = shared_mem;
-    float* tile_B = &shared_mem[tile_width * tile_width];
+    extern __shared__ double shared_mem[];
+    double* tile_A = shared_mem;
+    double* tile_B = &shared_mem[tile_width * tile_width];
     
     // Thread indices
     uint32_t tx = threadIdx.x;
@@ -44,7 +44,7 @@ __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint
     uint32_t row = blockIdx.y * tile_width + ty;
     uint32_t col = blockIdx.x * tile_width + tx;
     
-    float sum = 0.0f;
+    double sum = 0.0f;
     
     // Loop over tiles
     for (uint32_t tile = 0; tile < (n + tile_width - 1) / tile_width; ++tile) {
@@ -83,25 +83,25 @@ __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint
 }
 
 // Read a matrix from text file (row-major)
-float* read_matrix(const std::string& path, uint32_t& rows, uint32_t& cols) {
+double* read_matrix(const std::string& path, uint32_t& rows, uint32_t& cols) {
     std::ifstream in(path);
     if (!in) {
         std::cerr << "Error: cannot open file " << path << std::endl;
         std::exit(EXIT_FAILURE);
     }
     in >> rows >> cols;
-    float* mat = new float[static_cast<size_t>(rows) * cols];
+    double* mat = new double[static_cast<size_t>(rows) * cols];
     for (uint32_t i = 0; i < rows * cols; ++i) {
         double temp;
         in >> temp;
-        mat[i] = static_cast<float>(temp);
+        mat[i] = static_cast<double>(temp);
     }
     in.close();
     return mat;
 }
 
 // Write a matrix to text file (row-major)
-void write_matrix(const std::string& path, const float* mat, uint32_t rows, uint32_t cols) {
+void write_matrix(const std::string& path, const double* mat, uint32_t rows, uint32_t cols) {
     std::ofstream out(path);
     if (!out) {
         std::cerr << "Error: cannot write to file " << path << std::endl;
@@ -122,8 +122,8 @@ void write_matrix(const std::string& path, const float* mat, uint32_t rows, uint
 bool validate_result(const std::string &result_file, const std::string &reference_file) {
     uint32_t rows1, cols1, rows2, cols2;
     
-    float* result = read_matrix(result_file, rows1, cols1);
-    float* reference = read_matrix(reference_file, rows2, cols2);
+    double* result = read_matrix(result_file, rows1, cols1);
+    double* reference = read_matrix(reference_file, rows2, cols2);
     
     if (rows1 != rows2 || cols1 != cols2) {
         std::cerr << "Matrix dimensions don't match: (" << rows1 << "x" << cols1 
@@ -133,7 +133,7 @@ bool validate_result(const std::string &result_file, const std::string &referenc
         return false;
     }
     
-    const float epsilon = 1e-5f;
+    const double epsilon = 1e-5f;
     for (uint32_t i = 0; i < rows1 * cols1; ++i) {
         if (std::abs(result[i] - reference[i]) > epsilon) {
             std::cout << "Mismatch at index " << i << ": " 
@@ -174,10 +174,10 @@ int main(int argc, char *argv[]) {
     
     // Read input matrices
     std::cout << "Reading matrix A from: " << input0_file << std::endl;
-    float* A_host = read_matrix(input0_file, m, n_A);
+    double* A_host = read_matrix(input0_file, m, n_A);
     
     std::cout << "Reading matrix B from: " << input1_file << std::endl;
-    float* B_host = read_matrix(input1_file, n_B, p);
+    double* B_host = read_matrix(input1_file, n_B, p);
     
     if (n_A != n_B) {
         std::cerr << "Error: Matrix dimensions do not match for multiplication." << std::endl;
@@ -188,14 +188,14 @@ int main(int argc, char *argv[]) {
     n = n_A;
     
     // Allocate host memory for results
-    float* C_naive_host = new float[m * p];
-    float* C_tiled_host = new float[m * p];
+    double* C_naive_host = new double[m * p];
+    double* C_tiled_host = new double[m * p];
     
     // Allocate GPU memory
-    float *A_device, *B_device, *C_device;
-    size_t size_A = m * n * sizeof(float);
-    size_t size_B = n * p * sizeof(float);  
-    size_t size_C = m * p * sizeof(float);
+    double *A_device, *B_device, *C_device;
+    size_t size_A = m * n * sizeof(double);
+    size_t size_B = n * p * sizeof(double);  
+    size_t size_C = m * p * sizeof(double);
     
     CHECK_CUDA(cudaMalloc(&A_device, size_A));
     CHECK_CUDA(cudaMalloc(&B_device, size_B));
@@ -243,7 +243,7 @@ int main(int argc, char *argv[]) {
     dim3 tiled_gridSize((p + tile_width - 1) / tile_width, (m + tile_width - 1) / tile_width);
     
     // Calculate shared memory size (2 tiles)
-    size_t shared_mem_size = 2 * tile_width * tile_width * sizeof(float);
+    size_t shared_mem_size = 2 * tile_width * tile_width * sizeof(double);
     
     CHECK_CUDA(cudaEventRecord(start));
     tiled_cuda_matmul<<<tiled_gridSize, tiled_blockSize, shared_mem_size>>>(C_device, A_device, B_device, m, n, p, tile_width);
