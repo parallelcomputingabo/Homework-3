@@ -162,20 +162,111 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
-    // TODO: Read input0.raw (matrix A) and input1.raw (matrix B)
+    // Construct file paths
+    std::string folder = "../data/" + std::to_string(case_number) + "/";
+    std::string input0_file = folder + "input0.raw";
+    std::string input1_file = folder + "input1.raw";
+    std::string result_naive_file = folder + "result_naive_cuda.raw";
+    std::string result_tiled_file = folder + "result_tiled_cuda.raw";
+    std::string reference_file = folder + "output.raw";
 
-    // TODO: Use cudaMalloc and cudaMemcpy for GPU memory
-
+    uint32_t m, n_A, n_B, n, p;
+    
+    // Read input matrices
+    std::cout << "Reading matrix A from: " << input0_file << std::endl;
+    float* A_host = read_matrix(input0_file, m, n_A);
+    
+    std::cout << "Reading matrix B from: " << input1_file << std::endl;
+    float* B_host = read_matrix(input1_file, n_B, p);
+    
+    if (n_A != n_B) {
+        std::cerr << "Error: Matrix dimensions do not match for multiplication." << std::endl;
+        delete[] A_host;
+        delete[] B_host;
+        return EXIT_FAILURE;
+    }
+    n = n_A;
+    
+    // Allocate host memory for results
+    float* C_naive_host = new float[m * p];
+    float* C_tiled_host = new float[m * p];
+    
+    // Allocate GPU memory
+    float *A_device, *B_device, *C_device;
+    size_t size_A = m * n * sizeof(float);
+    size_t size_B = n * p * sizeof(float);  
+    size_t size_C = m * p * sizeof(float);
+    
+    CHECK_CUDA(cudaMalloc(&A_device, size_A));
+    CHECK_CUDA(cudaMalloc(&B_device, size_B));
+    CHECK_CUDA(cudaMalloc(&C_device, size_C));
+    
+    // Copy data to GPU
+    CHECK_CUDA(cudaMemcpy(A_device, A_host, size_A, cudaMemcpyHostToDevice));
+    CHECK_CUDA(cudaMemcpy(B_device, B_host, size_B, cudaMemcpyHostToDevice));
+    
+    // Configure grid and block dimensions
+    dim3 blockSize(16, 16);
+    dim3 gridSize((p + blockSize.x - 1) / blockSize.x, (m + blockSize.y - 1) / blockSize.y);
+    
+    // Create CUDA events for timing
+    cudaEvent_t start, stop;
+    CHECK_CUDA(cudaEventCreate(&start));
+    CHECK_CUDA(cudaEventCreate(&stop));
+    
     // Measure naive CUDA performance
-    // TODO: Launch naive_cuda_matmul kernel
-
-    // TODO: Write naive CUDA result to file and validate
+    CHECK_CUDA(cudaEventRecord(start));
+    naive_cuda_matmul<<<gridSize, blockSize>>>(C_device, A_device, B_device, m, n, p);
+    CHECK_CUDA(cudaEventRecord(stop));
+    CHECK_CUDA(cudaEventSynchronize(stop));
+    
+    float naive_cuda_time;
+    CHECK_CUDA(cudaEventElapsedTime(&naive_cuda_time, start, stop));
+    naive_cuda_time /= 1000.0f; // Convert to seconds
+    
+    // Copy result back to host
+    CHECK_CUDA(cudaMemcpy(C_naive_host, C_device, size_C, cudaMemcpyDeviceToHost));
+    
+    // Write naive CUDA result to file
+    std::cout << "Writing naive CUDA result to: " << result_naive_file << std::endl;
+    write_matrix(result_naive_file, C_naive_host, m, p);
+    
+    // Validate naive result
+    bool naive_correct = validate_result(result_naive_file, reference_file);
+    if (!naive_correct) {
+        std::cerr << "Naive CUDA result validation failed for case " << case_number << std::endl;
+    }
+    
     // Measure tiled CUDA performance
-
-    // TODO: Launch tiled_cuda_matmul kernel
-
-    // TODO: Write tiled CUDA result to file and validate
-
+    uint32_t tile_width = TILE_WIDTH;
+    dim3 tiled_blockSize(tile_width, tile_width);
+    dim3 tiled_gridSize((p + tile_width - 1) / tile_width, (m + tile_width - 1) / tile_width);
+    
+    // Calculate shared memory size (2 tiles)
+    size_t shared_mem_size = 2 * tile_width * tile_width * sizeof(float);
+    
+    CHECK_CUDA(cudaEventRecord(start));
+    tiled_cuda_matmul<<<tiled_gridSize, tiled_blockSize, shared_mem_size>>>(C_device, A_device, B_device, m, n, p, tile_width);
+    CHECK_CUDA(cudaEventRecord(stop));
+    CHECK_CUDA(cudaEventSynchronize(stop));
+    
+    float tiled_cuda_time;
+    CHECK_CUDA(cudaEventElapsedTime(&tiled_cuda_time, start, stop));
+    tiled_cuda_time /= 1000.0f; // Convert to seconds
+    
+    // Copy result back to host
+    CHECK_CUDA(cudaMemcpy(C_tiled_host, C_device, size_C, cudaMemcpyDeviceToHost));
+    
+    // Write tiled CUDA result to file
+    std::cout << "Writing tiled CUDA result to: " << result_tiled_file << std::endl;
+    write_matrix(result_tiled_file, C_tiled_host, m, p);
+    
+    // Validate tiled result
+    bool tiled_correct = validate_result(result_tiled_file, reference_file);
+    if (!tiled_correct) {
+        std::cerr << "Tiled CUDA result validation failed for case " << case_number << std::endl;
+    }
+    
     // Print performance results
     std::cout << "Case " << case_number << " (" << m << "x" << n << "x" << p << "):\n";
     std::cout << "Naive CUDA time: " << naive_cuda_time << " seconds\n";
