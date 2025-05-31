@@ -90,6 +90,24 @@ float* read_matrix(const std::string& path, uint32_t& rows, uint32_t& cols) {
     return mat;
 }
 
+// Write a matrix to text file (row-major)
+void write_matrix(const std::string& path, const float* mat, uint32_t rows, uint32_t cols) {
+    std::ofstream out(path);
+    if (!out) {
+        std::cerr << "Error: cannot write to file " << path << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
+    out << rows << " " << cols << '\n';
+    for (uint32_t i = 0; i < rows; ++i) {
+        for (uint32_t j = 0; j < cols; ++j) {
+            out << mat[i * cols + j];
+            if (j + 1 < cols) out << ' ';
+        }
+        out << '\n';
+    }
+    out.close();
+}
+
 bool validate_result(const std::string &result_file, const std::string &reference_file) {
     // TODO: Implement result validation (same as Assignment 2)
 }
