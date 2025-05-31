@@ -1,0 +1,3 @@
+/scratch/project_2013968/homework3/build/CMakeFiles/app.dir
+/scratch/project_2013968/homework3/build/CMakeFiles/edit_cache.dir
+/scratch/project_2013968/homework3/build/CMakeFiles/rebuild_cache.dir

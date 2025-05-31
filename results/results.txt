@@ -1,0 +1,312 @@
+Test Results
+=========================
+Run 1
+Case 0 (64x64x64):
+Naive CUDA time: 0.138112 seconds
+Tiled CUDA time: 0.051328 seconds
+Speedup: 2.69077x
+
+Run 2
+Case 0 (64x64x64):
+Naive CUDA time: 0.13872 seconds
+Tiled CUDA time: 0.051104 seconds
+Speedup: 2.71446x
+
+Run 3
+Case 0 (64x64x64):
+Naive CUDA time: 0.173696 seconds
+Tiled CUDA time: 0.054624 seconds
+Speedup: 3.17985x
+
+Run 4
+Case 0 (64x64x64):
+Naive CUDA time: 0.144576 seconds
+Tiled CUDA time: 0.052896 seconds
+Speedup: 2.73321x
+
+Run 5
+Case 0 (64x64x64):
+Naive CUDA time: 0.14432 seconds
+Tiled CUDA time: 0.051968 seconds
+Speedup: 2.77709x
+
+
+Run 1
+Case 1 (128x64x128):
+Naive CUDA time: 0.168672 seconds
+Tiled CUDA time: 0.058752 seconds
+Speedup: 2.87091x
+
+Run 2
+Case 1 (128x64x128):
+Naive CUDA time: 0.183104 seconds
+Tiled CUDA time: 0.061312 seconds
+Speedup: 2.98643x
+
+Run 3
+Case 1 (128x64x128):
+Naive CUDA time: 0.178656 seconds
+Tiled CUDA time: 0.062144 seconds
+Speedup: 2.87487x
+
+Run 4
+Case 1 (128x64x128):
+Naive CUDA time: 0.183136 seconds
+Tiled CUDA time: 0.062816 seconds
+Speedup: 2.91544x
+
+Run 5
+Case 1 (128x64x128):
+Naive CUDA time: 0.185632 seconds
+Tiled CUDA time: 0.060224 seconds
+Speedup: 3.08236x
+
+
+Run 1
+Case 2 (100x128x56):
+Naive CUDA time: 0.1536 seconds
+Tiled CUDA time: 0.05248 seconds
+Speedup: 2.92683x
+
+Run 2
+Case 2 (100x128x56):
+Naive CUDA time: 0.159136 seconds
+Tiled CUDA time: 0.054272 seconds
+Speedup: 2.93219x
+
+Run 3
+Case 2 (100x128x56):
+Naive CUDA time: 0.156544 seconds
+Tiled CUDA time: 0.053856 seconds
+Speedup: 2.90671x
+
+Run 4
+Case 2 (100x128x56):
+Naive CUDA time: 0.152576 seconds
+Tiled CUDA time: 0.055136 seconds
+Speedup: 2.76727x
+
+Run 5
+Case 2 (100x128x56):
+Naive CUDA time: 0.153344 seconds
+Tiled CUDA time: 0.052544 seconds
+Speedup: 2.91839x
+
+
+Run 1
+Case 3 (128x64x128):
+Naive CUDA time: 0.180224 seconds
+Tiled CUDA time: 0.061504 seconds
+Speedup: 2.93028x
+
+Run 2
+Case 3 (128x64x128):
+Naive CUDA time: 0.18304 seconds
+Tiled CUDA time: 0.060736 seconds
+Speedup: 3.0137x
+
+Run 3
+Case 3 (128x64x128):
+Naive CUDA time: 0.182944 seconds
+Tiled CUDA time: 0.061888 seconds
+Speedup: 2.95605x
+
+Run 4
+Case 3 (128x64x128):
+Naive CUDA time: 0.187552 seconds
+Tiled CUDA time: 0.062112 seconds
+Speedup: 3.01958x
+
+Run 5
+Case 3 (128x64x128):
+Naive CUDA time: 0.17872 seconds
+Tiled CUDA time: 0.06096 seconds
+Speedup: 2.93176x
+
+
+Run 1
+Case 4 (32x128x32):
+Naive CUDA time: 0.14272 seconds
+Tiled CUDA time: 0.050368 seconds
+Speedup: 2.83355x
+
+Run 2
+Case 4 (32x128x32):
+Naive CUDA time: 0.145056 seconds
+Tiled CUDA time: 0.047808 seconds
+Speedup: 3.03414x
+
+Run 3
+Case 4 (32x128x32):
+Naive CUDA time: 0.143968 seconds
+Tiled CUDA time: 0.047904 seconds
+Speedup: 3.00534x
+
+Run 4
+Case 4 (32x128x32):
+Naive CUDA time: 0.143872 seconds
+Tiled CUDA time: 0.048256 seconds
+Speedup: 2.98143x
+
+Run 5
+Case 4 (32x128x32):
+Naive CUDA time: 0.148672 seconds
+Tiled CUDA time: 0.047872 seconds
+Speedup: 3.10561x
+
+
+Run 1
+Case 5 (200x100x256):
+Naive CUDA time: 0.279296 seconds
+Tiled CUDA time: 0.099776 seconds
+Speedup: 2.79923x
+
+Run 2
+Case 5 (200x100x256):
+Naive CUDA time: 0.280192 seconds
+Tiled CUDA time: 0.098976 seconds
+Speedup: 2.83091x
+
+Run 3
+Case 5 (200x100x256):
+Naive CUDA time: 0.284192 seconds
+Tiled CUDA time: 0.117664 seconds
+Speedup: 2.41528x
+
+Run 4
+Case 5 (200x100x256):
+Naive CUDA time: 0.281952 seconds
+Tiled CUDA time: 0.093152 seconds
+Speedup: 3.02679x
+
+Run 5
+Case 5 (200x100x256):
+Naive CUDA time: 0.283872 seconds
+Tiled CUDA time: 0.104544 seconds
+Speedup: 2.71534x
+
+
+Run 1
+Case 6 (256x256x256):
+Naive CUDA time: 0.329664 seconds
+Tiled CUDA time: 0.123904 seconds
+Speedup: 2.66064x
+
+Run 2
+Case 6 (256x256x256):
+Naive CUDA time: 0.34944 seconds
+Tiled CUDA time: 0.142976 seconds
+Speedup: 2.44405x
+
+Run 3
+Case 6 (256x256x256):
+Naive CUDA time: 0.290784 seconds
+Tiled CUDA time: 0.122272 seconds
+Speedup: 2.37817x
+
+Run 4
+Case 6 (256x256x256):
+Naive CUDA time: 0.294304 seconds
+Tiled CUDA time: 0.114496 seconds
+Speedup: 2.57043x
+
+Run 5
+Case 6 (256x256x256):
+Naive CUDA time: 0.291104 seconds
+Tiled CUDA time: 0.113792 seconds
+Speedup: 2.55821x
+
+
+Run 1
+Case 7 (256x300x256):
+Naive CUDA time: 0.307584 seconds
+Tiled CUDA time: 0.133024 seconds
+Speedup: 2.31224x
+
+Run 2
+Case 7 (256x300x256):
+Naive CUDA time: 0.302816 seconds
+Tiled CUDA time: 0.139488 seconds
+Speedup: 2.17091x
+
+Run 3
+Case 7 (256x300x256):
+Naive CUDA time: 0.2896 seconds
+Tiled CUDA time: 0.136928 seconds
+Speedup: 2.11498x
+
+Run 4
+Case 7 (256x300x256):
+Naive CUDA time: 0.299648 seconds
+Tiled CUDA time: 0.125664 seconds
+Speedup: 2.38452x
+
+Run 5
+Case 7 (256x300x256):
+Naive CUDA time: 0.297664 seconds
+Tiled CUDA time: 0.126816 seconds
+Speedup: 2.34721x
+
+
+Run 1
+Case 8 (64x128x64):
+Naive CUDA time: 0.137984 seconds
+Tiled CUDA time: 0.05168 seconds
+Speedup: 2.66997x
+
+Run 2
+Case 8 (64x128x64):
+Naive CUDA time: 0.138944 seconds
+Tiled CUDA time: 0.052384 seconds
+Speedup: 2.65241x
+
+Run 3
+Case 8 (64x128x64):
+Naive CUDA time: 0.140512 seconds
+Tiled CUDA time: 0.048736 seconds
+Speedup: 2.88313x
+
+Run 4
+Case 8 (64x128x64):
+Naive CUDA time: 0.136512 seconds
+Tiled CUDA time: 0.050976 seconds
+Speedup: 2.67797x
+
+Run 5
+Case 8 (64x128x64):
+Naive CUDA time: 0.137216 seconds
+Tiled CUDA time: 0.049632 seconds
+Speedup: 2.76467x
+
+
+Run 1
+Case 9 (256x256x257):
+Naive CUDA time: 0.292096 seconds
+Tiled CUDA time: 0.111104 seconds
+Speedup: 2.62903x
+
+Run 2
+Case 9 (256x256x257):
+Naive CUDA time: 0.293888 seconds
+Tiled CUDA time: 0.113376 seconds
+Speedup: 2.59215x
+
+Run 3
+Case 9 (256x256x257):
+Naive CUDA time: 0.297472 seconds
+Tiled CUDA time: 0.11216 seconds
+Speedup: 2.65221x
+
+Run 4
+Case 9 (256x256x257):
+Naive CUDA time: 0.295744 seconds
+Tiled CUDA time: 0.117952 seconds
+Speedup: 2.50733x
+
+Run 5
+Case 9 (256x256x257):
+Naive CUDA time: 0.295552 seconds
+Tiled CUDA time: 0.115488 seconds
+Speedup: 2.55916x
+
+
