@@ -273,6 +273,17 @@ int main(int argc, char *argv[]) {
     std::cout << "Tiled CUDA time: " << tiled_cuda_time << " seconds\n";
 
     // Clean up
-
-    return 0;
+    delete[] A_host;
+    delete[] B_host;
+    delete[] C_naive_host;
+    delete[] C_tiled_host;
+    
+    CHECK_CUDA(cudaFree(A_device));
+    CHECK_CUDA(cudaFree(B_device));
+    CHECK_CUDA(cudaFree(C_device));
+    
+    CHECK_CUDA(cudaEventDestroy(start));
+    CHECK_CUDA(cudaEventDestroy(stop));
+    
+    return EXIT_SUCCESS;
 }
