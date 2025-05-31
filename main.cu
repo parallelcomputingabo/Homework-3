@@ -4,6 +4,16 @@
 #include <cuda_runtime.h>
 #include <cstdint>
 
+#define TILE_WIDTH 16
+#define CHECK_CUDA(call) \
+    do { \
+        cudaError_t err = call; \
+        if (err != cudaSuccess) { \
+            std::cerr << "CUDA error at " << __FILE__ << ":" << __LINE__ << " - " << cudaGetErrorString(err) << std::endl; \
+            exit(1); \
+        } \
+    } while(0)
+
 __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p) {
     // Calculate thread indices
     uint32_t row = blockIdx.y * blockDim.y + threadIdx.y;
