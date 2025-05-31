@@ -1,0 +1,38 @@
+running testcase 0
+error missmatch in dimension 775096884908080182srun: error: g5301: task 0: Exited with exit code 1
+srun: Terminating StepId=4600172.0
+running testcase 1
+error missmatch in dimension 805975094824194102srun: error: g5301: task 0: Exited with exit code 1
+srun: Terminating StepId=4600172.1
+running testcase 2
+error missmatch in dimension 171455025540553777srun: error: g5301: task 0: Exited with exit code 1
+srun: Terminating StepId=4600172.2
+running testcase 3
+error missmatch in dimension 805975094824194102srun: error: g5301: task 0: Exited with exit code 1
+srun: Terminating StepId=4600172.3
+running testcase 4
+error missmatch in dimension 822753330540553777srun: error: g5301: task 0: Exited with exit code 1
+srun: Terminating StepId=4600172.4
+running testcase 5
+error missmatch in dimension 170930225540028977srun: error: g5301: task 0: Exited with exit code 1
+srun: Terminating StepId=4600172.5
+running testcase 6
+terminate called after throwing an instance of 'std::bad_array_new_length'
+  what():  std::bad_array_new_length
+srun: error: g5301: task 0: Aborted
+srun: Terminating StepId=4600172.6
+running testcase 7
+terminate called after throwing an instance of 'std::bad_array_new_length'
+  what():  std::bad_array_new_length
+srun: error: g5301: task 0: Aborted
+srun: Terminating StepId=4600172.7
+running testcase 8
+terminate called after throwing an instance of 'std::bad_array_new_length'
+  what():  std::bad_array_new_length
+srun: error: g5301: task 0: Aborted
+srun: Terminating StepId=4600172.8
+running testcase 9
+terminate called after throwing an instance of 'std::bad_array_new_length'
+  what():  std::bad_array_new_length
+srun: error: g5301: task 0: Aborted
+srun: Terminating StepId=4600172.9
