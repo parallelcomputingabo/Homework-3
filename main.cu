@@ -5,7 +5,21 @@
 #include <cstdint>
 
 __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p) {
-    // TODO: Implement naive CUDA matrix multiplication
+    // Calculate thread indices
+    uint32_t row = blockIdx.y * blockDim.y + threadIdx.y;
+    uint32_t col = blockIdx.x * blockDim.x + threadIdx.x;
+    
+    // Check bounds
+    if (row < m && col < p) {
+        float sum = 0.0f;
+        
+        // Compute dot product for C[row][col]
+        for (uint32_t k = 0; k < n; ++k) {
+            sum += A[row * n + k] * B[k * p + col];
+        }
+        
+        C[row * p + col] = sum;
+    }
 }
 
 __global__ void tiled_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p, uint32_t tile_width) {
