@@ -36,12 +36,29 @@ I have designed and executed my solution to run on Mahti super computer within t
 | 9   | 256×256×257     | 0.056782      | 0.053043       | 0.010905        | 0.000360       | 0.000279       | 1.29×                   | 39.14×                    |
 
 
-Note that I got those readings before I add the error-checking code to make my readings consistent with assignment2's, but then I added the debugging/error checking lines. 
-
 For the tiled matrix, I have used TILE_WIDTH of 16, I tried 32 but 16 was slightly faster in most of cases (I think because we have relatively small matrices). 
 
 
 Naive results go in data/<case>/result.raw, and the tiled version is saved as data/<case>/result_tiled.raw. Neither overwrites the original output.raw.
+
+
+## Interpretation
+
+- **Tiled vs. Naive CUDA**  
+  - Without error checks, tiled runs ~1.50×–1.63× faster than naive.  
+  - With error checks, tiled still beats naive by ~1.19×–2.16×.
+
+- **GPU vs. Parallel CPU**  
+  - Including transfers, tiled CUDA is ~5×–56× faster than parallel CPU.  
+  - Small matrices (64³) show ~5× speedup (transfer overhead dominates); large matrices (e.g. 256×300×256) show ~56×.
+
+- **Error-Check Overhead**  
+  - Adding `cudaGetLastError()`/`cudaDeviceSynchronize()` adds ~10%–30% to total GPU time.  
+  - Even with checks, tiled remains much faster than naive and CPU.
+
+- **Key Insight**  
+  - Shared-memory tiling + GPU delivers orders-of-magnitude speedup over CPU, despite data-transfer and error-check overhead.
+
 
 ## Dependencies: 
 - CUDA Toolkit ≥ 11.5.0
