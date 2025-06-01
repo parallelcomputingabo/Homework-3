@@ -102,7 +102,9 @@ __global__ void naive_cuda_matmul(double* C, double* A, double* B, uint32_t m, u
     // In assignment2, a multidimensional loop was used, which
     // could be paralellized thanks to openMP. CUDA has no such
     // feature, thus the rewriting of the multiplication algorithm
-    // with respect to how grid, blocks and threads works.
+    // with respect to how grid, blocks and threads works. In CUDA,
+	// each thread in a block is doing its own calculation, while other
+	// threads (which runs in parallel) do the same.
 
     int i = blockIdx.y * blockDim.y + threadIdx.y;
     int j = blockIdx.x * blockDim.x + threadIdx.x;
@@ -280,7 +282,7 @@ int main(int argc, char* argv[]) {
     }
 
     std::cout << "Case " << case_number << " (" << m << "x" << n << "x" << p << "):\n";
-    std::cout << "Naive time: " << naive_time << " seconds\n";
+    std::cout << "Naive time: " << naive_time << " milliseconds (" << naive_time/1000 << ") seconds\n";
 	
 	// Clean up
     delete[] AMatrix->dataRowMajorOrder;
