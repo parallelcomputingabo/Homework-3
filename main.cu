@@ -161,53 +161,52 @@ bool compareFiles(string originPath, string targetPath) {
     return true;
 }
 
-double measure_performance(double* CPU_C, double* CPU_A, double* CPU_B, uint32_t m, uint32_t n, uint32_t p) {
+double measure_naive_performance(double* CPU_C, double* CPU_A, double* CPU_B, uint32_t m, uint32_t n, uint32_t p) {
     dim3 blockSize(32, 32);
 	dim3 gridSize((p + 31) / 32, (m + 31) / 32);
-
+	
+	// Prepare and allocate GPU memory for the matrices
     double* GPU_A;
     double* GPU_B;
     double* GPU_C;
 
-    size_t sizeA = sizeof(double) * m * n;
-    size_t sizeB = sizeof(double) * n * p;
-    size_t sizeC = sizeof(double) * m * p;
-	
+    size_t allocationA = sizeof(double) * m * n;
+    size_t allocationB = sizeof(double) * n * p;
+    size_t allocationC = sizeof(double) * m * p;
 
-    // Allocate GPU memory
-    cudaMalloc(&GPU_A, sizeA);
-    cudaMalloc(&GPU_B, sizeB);
-    cudaMalloc(&GPU_C, sizeC);
+    cudaMalloc(&GPU_A, allocationA);
+    cudaMalloc(&GPU_B, allocationB);
+    cudaMalloc(&GPU_C, allocationC);
 
     // Copy matrices from CPU to GPU
-    cudaMemcpy(GPU_A, CPU_A, sizeA, cudaMemcpyHostToDevice);
-    cudaMemcpy(GPU_B, CPU_B, sizeB, cudaMemcpyHostToDevice);
+    cudaMemcpy(GPU_A, CPU_A, allocationA, cudaMemcpyHostToDevice);
+    cudaMemcpy(GPU_B, CPU_B, allocationB, cudaMemcpyHostToDevice);
 
-	
+	// Prepare performance measurement
     cudaEvent_t start;
 	cudaEvent_t stop;
-
     cudaEventCreate(&start);
     cudaEventCreate(&stop);
+	
     // Start recording the performance
     cudaEventRecord(start);
-    naive_cuda_matmul<<<gridSize, blockSize>>>(GPU_C, GPU_A, GPU_B, m, n, p);
-	cudaDeviceSynchronize();
-
-    cudaError_t error = cudaGetLastError();
-    if (error != cudaSuccess) {
-        cout << "CUDA kernel launch failed: " << cudaGetErrorString(error) << endl;
-    }
 	
+	// Perform the naive multiplication
+    naive_cuda_matmul<<<gridSize, blockSize>>>(GPU_C, GPU_A, GPU_B, m, n, p);
+	
+	// Stop the recording.
+	cudaDeviceSynchronize();
     cudaEventRecord(stop);
-	cudaMemcpy(CPU_C, GPU_C, sizeC, cudaMemcpyDeviceToHost);
     cudaEventSynchronize(stop);
+	
+	// Copy the calculated data to CPU
+	cudaMemcpy(CPU_C, GPU_C, allocationC, cudaMemcpyDeviceToHost);
 
-
+	// Write the recorded time. This is the time it took to performance
+	// the multiplication
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, start, stop);
 
-	
     // Delete memory and events from GPU
     cudaFree(GPU_A);
     cudaFree(GPU_B);
@@ -244,7 +243,7 @@ int main(int argc, char* argv[]) {
 
     double *C_naive = new double[m * p];
 		
-    double naive_time = measure_performance(C_naive, AMatrix->dataRowMajorOrder, BMatrix->dataRowMajorOrder, m, n, p);
+    double naive_time = measure_naive_performance(C_naive, AMatrix->dataRowMajorOrder, BMatrix->dataRowMajorOrder, m, n, p);
 
     ofstream naiveResultFile(naive_result_file);
     naiveResultFile << m << " " << p << "\n";

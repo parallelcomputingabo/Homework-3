@@ -12,6 +12,11 @@ By Thai Nguyen.
 6. Upload __main.cu__ as well as the __data__ folder into the root of the environment
 7. The notebook already has commands to run all cases. So just go to Runtime -> Run all
 
+## Results
+
+The code produces outputs for each algorithm (e.g. naive_result.raw) and automatically compares them to reference files
+of each case (output.raw). These can be found in each case folder under data (e.g. data/0/naive_result.raw)
+
 ## Explanation and findings
 
 Much of the code is the same as in homework 1 and 2. The exact same functions
