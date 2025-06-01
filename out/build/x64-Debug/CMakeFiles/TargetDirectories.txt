@@ -1,3 +1,0 @@
-C:/Users/Priva/Documents/DI-studies/parallell-programming/Homework-3/out/build/x64-Debug/CMakeFiles/app.dir
-C:/Users/Priva/Documents/DI-studies/parallell-programming/Homework-3/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/Priva/Documents/DI-studies/parallell-programming/Homework-3/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
