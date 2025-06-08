@@ -6,7 +6,12 @@
 #include <iomanip>
 //Because the share float matrix assignment wants a constant value
 #define tile_width 16
-//
+
+// Just to make sure
+#include <cstdint> 
+#include <cmath>
+//...
+
 __global__ void naive_cuda_matmul(float *C, float *A, float *B, uint32_t m, uint32_t n, uint32_t p) {
     // -TODO-: Implement naive CUDA matrix multiplication
     int idx2 = blockIdx.y * blockDim.y + threadIdx.y;
