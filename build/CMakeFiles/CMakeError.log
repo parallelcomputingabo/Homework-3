@@ -1,22 +1,22 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /users/ashossai/Homework-3/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b58a7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b58a7.dir/build.make CMakeFiles/cmTC_b58a7.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9b9d0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9b9d0.dir/build.make CMakeFiles/cmTC_9b9d0.dir/build
 gmake[1]: Entering directory '/users/ashossai/Homework-3/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b58a7.dir/src.cxx.o
-/appl/spack/v020/install-tree/gcc-8.5.0/gcc-10.4.0-2oazqj/bin/g++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles/cmTC_b58a7.dir/src.cxx.o -c /users/ashossai/Homework-3/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_b58a7
-/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b58a7.dir/link.txt --verbose=1
-/appl/spack/v020/install-tree/gcc-8.5.0/gcc-10.4.0-2oazqj/bin/g++ CMakeFiles/cmTC_b58a7.dir/src.cxx.o -o cmTC_b58a7 
-/appl/spack/v020/install-tree/gcc-8.5.0/binutils-2.40-nt5ao6/bin/ld: CMakeFiles/cmTC_b58a7.dir/src.cxx.o: in function `main':
+Building CXX object CMakeFiles/cmTC_9b9d0.dir/src.cxx.o
+/appl/spack/v020/install-tree/gcc-8.5.0/gcc-10.4.0-2oazqj/bin/g++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles/cmTC_9b9d0.dir/src.cxx.o -c /users/ashossai/Homework-3/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_9b9d0
+/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b9d0.dir/link.txt --verbose=1
+/appl/spack/v020/install-tree/gcc-8.5.0/gcc-10.4.0-2oazqj/bin/g++ CMakeFiles/cmTC_9b9d0.dir/src.cxx.o -o cmTC_9b9d0 
+/appl/spack/v020/install-tree/gcc-8.5.0/binutils-2.40-nt5ao6/bin/ld: CMakeFiles/cmTC_9b9d0.dir/src.cxx.o: in function `main':
 src.cxx:(.text+0x2d): undefined reference to `pthread_create'
 /appl/spack/v020/install-tree/gcc-8.5.0/binutils-2.40-nt5ao6/bin/ld: src.cxx:(.text+0x39): undefined reference to `pthread_detach'
 /appl/spack/v020/install-tree/gcc-8.5.0/binutils-2.40-nt5ao6/bin/ld: src.cxx:(.text+0x45): undefined reference to `pthread_cancel'
 /appl/spack/v020/install-tree/gcc-8.5.0/binutils-2.40-nt5ao6/bin/ld: src.cxx:(.text+0x56): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_b58a7.dir/build.make:99: cmTC_b58a7] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_9b9d0.dir/build.make:99: cmTC_9b9d0] Error 1
 gmake[1]: Leaving directory '/users/ashossai/Homework-3/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_b58a7/fast] Error 2
+gmake: *** [Makefile:127: cmTC_9b9d0/fast] Error 2
 
 
 Source file was:
@@ -43,18 +43,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /users/ashossai/Homework-3/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bea10/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bea10.dir/build.make CMakeFiles/cmTC_bea10.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fd479/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fd479.dir/build.make CMakeFiles/cmTC_fd479.dir/build
 gmake[1]: Entering directory '/users/ashossai/Homework-3/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bea10.dir/CheckFunctionExists.cxx.o
-/appl/spack/v020/install-tree/gcc-8.5.0/gcc-10.4.0-2oazqj/bin/g++   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu++17 -o CMakeFiles/cmTC_bea10.dir/CheckFunctionExists.cxx.o -c /users/ashossai/Homework-3/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_bea10
-/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bea10.dir/link.txt --verbose=1
-/appl/spack/v020/install-tree/gcc-8.5.0/gcc-10.4.0-2oazqj/bin/g++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_bea10.dir/CheckFunctionExists.cxx.o -o cmTC_bea10  -lpthreads 
+Building CXX object CMakeFiles/cmTC_fd479.dir/CheckFunctionExists.cxx.o
+/appl/spack/v020/install-tree/gcc-8.5.0/gcc-10.4.0-2oazqj/bin/g++   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu++17 -o CMakeFiles/cmTC_fd479.dir/CheckFunctionExists.cxx.o -c /users/ashossai/Homework-3/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_fd479
+/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd479.dir/link.txt --verbose=1
+/appl/spack/v020/install-tree/gcc-8.5.0/gcc-10.4.0-2oazqj/bin/g++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_fd479.dir/CheckFunctionExists.cxx.o -o cmTC_fd479  -lpthreads 
 /appl/spack/v020/install-tree/gcc-8.5.0/binutils-2.40-nt5ao6/bin/ld: cannot find -lpthreads: No such file or directory
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_bea10.dir/build.make:99: cmTC_bea10] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_fd479.dir/build.make:99: cmTC_fd479] Error 1
 gmake[1]: Leaving directory '/users/ashossai/Homework-3/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_bea10/fast] Error 2
+gmake: *** [Makefile:127: cmTC_fd479/fast] Error 2
 
 
 

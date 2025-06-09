@@ -1,0 +1,11 @@
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /users/ashossai/Homework-3/build
+Consolidate compiler generated dependencies of target app
+[100%] Built target app
+Case 8 (64x128x64):
+Naive CUDA time: 0.000219232 seconds
+Tiled CUDA time: 8.688e-05 seconds
+Naive result: PASS
+Tiled result: PASS
+Speedup (Tiled vs Naive): 2.52339x

@@ -22,8 +22,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake"
   "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/Compiler/GNU.cmake"
   "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/Compiler/NVIDIA-CUDA.cmake"
-  "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/FindCUDA.cmake"
-  "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/FindCUDA/select_compute_arch.cmake"
+  "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/FindCUDAToolkit.cmake"
   "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
   "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/FindPackageMessage.cmake"
   "/appl/spack/v017/install-tree/gcc-8.5.0/cmake-3.21.4-elesn4/share/cmake-3.21/Modules/FindThreads.cmake"
@@ -51,5 +50,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/main.dir/DependInfo.cmake"
+  "CMakeFiles/app.dir/DependInfo.cmake"
   )
